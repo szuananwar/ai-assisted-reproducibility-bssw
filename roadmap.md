@@ -1,18 +1,26 @@
 # Project Roadmap
 
-### Milestone 1 (Completed)
-- [x] Establish foundational GitHub repository structure.
-- [x] Draft initial Best Practices Guide outline and introductory section.
-- [x] Develop prototype `AI_Assisted_Reproducibility_Checker.ipynb` notebook using rule-based heuristics.
-- [x] Define standardized reproducibility checklist and scoring rubric.
+## Milestone 1: Foundation and Prototype
 
-### Milestone 2 (Upcoming)
-- [ ] Expand the prototype into a fully functional CLI tool (`reproducibility_checker.py`).
-- [ ] Integrate basic LLM/AI-assisted recommendations for "Suggested Fixes" based on repository context.
-- [ ] Draft remaining sections of the Best Practices Guide.
-- [ ] Beta-test the framework on 2-3 sample scientific AI repositories.
+- [x] Create GitHub repository
+- [x] Draft Best Practices Guide outline
+- [x] Write initial section on AI-assisted reproducibility
+- [x] Develop prototype Jupyter notebook
+- [x] Create reproducibility checklist and scoring rubric
+- [x] Add reusable workflow templates
 
-### Milestone 3 (Final)
-- [ ] Publish the finalized open-source framework and peer-reviewed guide on BSSw.io.
-- [ ] Host a virtual HPC webinar demonstrating the "Self-Healing Workflow" concept.
-- [ ] Publish project outcomes blog post.
+## Milestone 2: Expansion and Feedback
+
+- [ ] Expand the Best Practices Guide
+- [ ] Improve the reproducibility checker
+- [ ] Add more AI/HPC examples
+- [ ] Collect feedback from researchers, students, and BSSw community members
+- [ ] Refine scoring rubric
+
+## Milestone 3: Dissemination
+
+- [ ] Prepare BSSw blog post
+- [ ] Prepare HPC Best Practices webinar slides
+- [ ] Finalize tutorial materials
+- [ ] Publish final guide and GitHub resources
+- [ ] Share project with BSSw and broader scientific software communities
