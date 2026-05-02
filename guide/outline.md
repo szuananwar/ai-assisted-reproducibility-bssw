@@ -1,16 +1,57 @@
-# Guide Outline: AI-Assisted Reproducibility in Scientific Software
+# Best Practices Guide: AI-Assisted Reproducibility for Sustainable Scientific Software
 
-1. **Introduction: AI-Assisted Reproducibility in Scientific Software** (Drafted)
-   - The Reproducibility Crisis in AI/HPC.
-   - Moving from Passive Documentation to Active Tooling.
-2. **The Anatomy of a Reproducible AI Workflow**
-   - Environment Management (Spack, Conda)
-   - Containerization (Apptainer, Docker)
-   - Automated Testing & CI/CD
-3. **Automated Auditing: Implementing the Reproducibility Checker**
-   - Defining the Scoring Rubric.
-   - Integrating the checker into daily developer workflows.
-4. **AI-Assisted Remediation (Self-Healing)**
-   - How LLMs can automatically generate missing `environment.yml` or `Apptainer.def` files based on codebase analysis.
-5. **Community Adoption & Scaling in HPC**
-   - Deploying these tools in national labs and academic research centers.
+**1. Introduction**
+* Why reproducibility matters in scientific software
+* Why AI workflows make reproducibility harder
+* Connection to HPC, scientific computing, and BSSw goals
+
+**2. Reproducible Scientific Workflows**
+* Version control
+* Clear documentation
+* Environment management
+* Dependency tracking
+* Data and model versioning
+
+**3. AI-Assisted Reproducibility**
+* How AI can help identify missing files
+* How AI can suggest improvements
+* How AI can support debugging failed workflows
+* Limits and risks of AI-generated recommendations
+
+**4. Code Quality and Testing**
+* Unit tests
+* Workflow tests
+* Continuous integration
+* BuildTest for HPC testing
+* Basic reproducibility checks
+
+**5. Environment and Dependency Management**
+* requirements.txt
+* environment.yml
+* spack.yaml
+* Containers (Apptainer/Docker for portability)
+
+**6. Tracking AI Experiments**
+* Parameters and Metrics
+* Model versions
+* MLflow or similar tools
+
+**7. Reproducibility Checklist and Score**
+* Reproducibility categories
+* Scoring rubric
+* How to interpret the score
+
+**8. Case Study Prototype**
+* Simple AI workflow
+* Reproducibility checker
+* Suggested fixes
+
+**9. Recommendations for Researchers**
+* Minimum reproducibility package
+* Recommended repository structure
+* Best practices for students and teams
+
+**10. Future Work**
+* AI-assisted workflow repair
+* Self-healing scientific workflows
+* Community feedback and expansion
