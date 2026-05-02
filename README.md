@@ -1,19 +1,37 @@
-# Self-Healing Scientific Workflows: AI-Assisted Reproducibility
-*A 2026 Better Scientific Software (BSSw) Fellowship Project*
+# AI-Assisted Reproducibility for Scientific Software
 
-## Project Overview
-Scientific software—particularly AI-enabled High-Performance Computing (HPC) workflows—suffers from a reproducibility crisis due to missing environments, undocumented dependencies, and untracked parameters. 
+This repository supports the BSSw Fellowship project, **Self-Healing Scientific Workflows: AI-Assisted Reproducibility for Sustainable Scientific Software**.
 
-This project advances beyond static best practices documentation by introducing an **AI-Assisted Reproducibility Framework**. This active framework helps scientific software teams automatically evaluate their repositories, identify missing reproducibility practices (e.g., containerization, CI/CD, workflow tracking), and generate actionable, AI-assisted recommendations.
+## Project Goal
 
-## Repository Contents
-* `/checker`: Core Python modules for the reproducibility evaluation tool.
-* `/notebooks`: Interactive Jupyter tutorials demonstrating the framework.
-* `/guide`: The evolving Best Practices Guide for sustainable AI software.
-* `/templates`: Standardized templates for `spack.yaml`, `environment.yml`, `Dockerfile`, etc.
+The goal of this project is to develop open, practical resources that help researchers improve the reproducibility, sustainability, and reliability of AI-enabled scientific software workflows.
 
-## Getting Started
-To test the prototype reproducibility checker:
-1. Clone this repository: `git clone https://github.com/yourusername/ai-assisted-reproducibility-bssw.git`
-2. Navigate to the notebooks directory: `cd notebooks`
-3. Launch Jupyter and open `AI_Assisted_Reproducibility_Checker.ipynb`
+## Main Components
+
+- Best Practices Guide
+- AI-Assisted Reproducibility Checker
+- Jupyter Notebook Tutorial
+- Reproducibility Scoring Rubric
+- Templates for reproducible AI and HPC workflows
+
+## Why This Matters
+
+Scientific AI workflows are becoming more complex and difficult to reproduce. This project helps researchers identify missing reproducibility components such as documentation, environment files, tests, containers, and experiment tracking.
+
+## Repository Structure
+
+- `guide/` — Best practices guide and draft sections
+- `notebooks/` — Jupyter notebook tutorials
+- `checker/` — Prototype reproducibility checker
+- `templates/` — Reusable files for reproducible workflows
+- `examples/` — Sample AI/HPC workflows
+- `tests/` — Testing examples
+
+## Milestone 1 Deliverables
+
+- Best Practices Guide outline
+- Draft section on AI-assisted reproducibility
+- Prototype Jupyter notebook
+- Sample reproducibility checklist and scoring rubric
+- Initial GitHub repository structure
+- Project roadmap
