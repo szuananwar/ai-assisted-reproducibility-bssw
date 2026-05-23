@@ -1,37 +1,36 @@
 # AI-Assisted Reproducibility for Scientific Software
 
-This repository supports the BSSw Fellowship project, **Self-Healing Scientific Workflows: AI-Assisted Reproducibility for Sustainable Scientific Software**.
+This repository contains educational resources, examples, and reusable workflows developed as part of the 2026 Better Scientific Software (BSSw) Fellowship project:
 
-## Project Goal
+**Sustainable AI: Best Practices for Reproducible Scientific Software Development**
 
-The goal of this project is to develop open, practical resources that help researchers improve the reproducibility, sustainability, and reliability of AI-enabled scientific software workflows.
+The project explores how AI tools and local large language models (LLMs) can support reproducibility, sustainability, and software quality assessment for scientific computing and HPC workflows.
 
-## Main Components
+---
 
-- Best Practices Guide
-- AI-Assisted Reproducibility Checker
-- Jupyter Notebook Tutorial
-- Reproducibility Scoring Rubric
-- Templates for reproducible AI and HPC workflows
+# Goals
 
-## Why This Matters
+This repository aims to:
 
-Scientific AI workflows are becoming more complex and difficult to reproduce. This project helps researchers identify missing reproducibility components such as documentation, environment files, tests, containers, and experiment tracking.
+- Demonstrate reproducible AI-assisted software workflows
+- Promote sustainable scientific software practices
+- Provide hands-on educational tutorials
+- Explore local LLM infrastructure for scientific computing
+- Support open and accessible research software practices
 
-## Repository Structure
+---
 
-- `guide/` — Best practices guide and draft sections
-- `notebooks/` — Jupyter notebook tutorials
-- `checker/` — Prototype reproducibility checker
-- `templates/` — Reusable files for reproducible workflows
-- `examples/` — Sample AI/HPC workflows
-- `tests/` — Testing examples
+# Repository Structure
 
-## Milestone 1 Deliverables
-
-- Best Practices Guide outline
-- Draft section on AI-assisted reproducibility
-- Prototype Jupyter notebook
-- Sample reproducibility checklist and scoring rubric
-- Initial GitHub repository structure
-- Project roadmap
+```text
+ai-assisted-reproducibility-bssw/
+├── README.md
+├── LICENSE
+├── examples/
+│   └── sample-ml-workflow/
+│       ├── ai_repo_assessor.py
+│       ├── README.md
+│       └── requirements.txt
+├── notebooks/
+├── guide/
+└── templates/
