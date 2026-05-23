@@ -1,0 +1,2 @@
+# No Python packages required.
+# This example uses Python standard library + local Ollama.
