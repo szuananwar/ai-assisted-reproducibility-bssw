@@ -153,14 +153,6 @@ https://github.com/kokkos/kokkos
 
 ---
 
-# Example Input
-
-```text
-https://github.com/kokkos/kokkos
-```
-
----
-
 # Connection to BSSw Fellowship Project
 
 This example supports the BSSw Fellowship project:
