@@ -11,6 +11,10 @@ The goal is to support sustainable and reproducible AI workflows for scientific 
 
 ---
 
+> Note: Many HPC centers, research labs, and preconfigured development environments may already provide Python, Ollama, and AI models. In these environments, users can often run the tool immediately without additional installation steps.
+
+---
+
 # Purpose
 
 This example demonstrates how AI can assist researchers and developers in evaluating scientific software repositories using a reproducibility and sustainability rubric.
@@ -52,6 +56,11 @@ The assessment evaluates:
 - **Below 50:** High reproducibility risk
 
 ---
+## Why This Rubric?
+
+The rubric focuses on practical indicators of software reproducibility and sustainability that are commonly recommended in scientific software engineering and HPC communities. The criteria were selected because they can be evaluated consistently and provide actionable guidance for improving repository quality.
+
+---
 
 # Example Repositories
 
@@ -76,63 +85,61 @@ https://github.com/pytorch/pytorch
 # Requirements
 
 - Python 3
-- Ollama installed
-- Gemma model
+- Ollama
+- Gemma model (automatically downloaded if missing)
 
 ---
 
-# One-Time Setup
+# Quick Start
 
-## Install Python Dependencies
+Many researchers and HPC users already have Python, Ollama, and the required model installed in their environment.
 
-Install the required Python package:
-
-```bash
-pip3 install -r requirements.txt
-```
-
-This only needs to be done once when setting up the project.
-
----
-
-# Install Ollama
-
-Download Ollama from:
-
-https://ollama.com/download
-
----
-
-# Download Gemma Model
-
-The script can automatically download the model if it is missing, but you may also install it manually:
-
-```bash
-ollama pull gemma3:1b
-```
-
-You may also use:
-
-```bash
-ollama pull gemma3:4b
-```
-
-for improved response quality.
-
----
-
-# Run the Tool
+If your system is already configured, simply run:
 
 ```bash
 python3 ai_repo_assessor.py
 ```
 
 The script will automatically:
-- verify Ollama installation,
-- check whether the Gemma model exists,
-- download the model if missing,
-- evaluate the repository,
-- generate a reproducibility assessment report.
+
+* Verify that Ollama is installed
+* Check whether the required Gemma model is available
+* Download the model if it is missing
+* Generate a reproducibility assessment report
+
+No additional setup is required.
+
+---
+
+# One-Time Setup for New Environments
+
+If you are using a new system that does not already have the required software installed:
+
+## Install Python Dependencies
+
+```bash
+pip3 install -r requirements.txt
+```
+
+## Install Ollama
+
+Download and install Ollama from:
+
+https://ollama.com/download
+
+## Download the Gemma Model
+
+```bash
+ollama pull gemma3:4b
+```
+
+The script can also download the model automatically if it is not already installed.
+
+# Run the Tool
+
+```bash
+python3 ai_repo_assessor.py
+```
 
 ---
 
