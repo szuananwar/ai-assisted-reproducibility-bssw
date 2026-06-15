@@ -89,12 +89,58 @@ https://github.com/pytorch/pytorch
 - Gemma model (automatically downloaded if missing)
 
 ---
+# Quick Start for Preconfigured Environments
 
 # Quick Start
 
 Many researchers and HPC users already have Python, Ollama, and the required model installed in their environment.
 
 If your system is already configured, simply run:
+If Python, Ollama, and the Gemma model are already installed in your environment, you do not need to install or download anything.
+
+Simply run:
+
+```bash
+python3 ai_repo_assessor.py
+
+---
+# One-Time Setup for New Environments
+
+If you are using a new system that does not already have the required Python package, install it with:
+
+```bash
+pip3 install -r requirements.txt
+
+----
+
+# Install Ollama
+
+Download Ollama from:
+
+https://ollama.com/download
+
+---
+
+# Download Gemma Model
+
+The script can automatically download the model if it is missing, but you may also install it manually:
+
+```bash
+ollama pull gemma3:1b
+```
+
+You may also use:
+
+```bash
+ollama pull gemma3:4b
+```
+
+for improved response quality.
+
+---
+
+# Run the Tool
+(Update README for HPC and preconfigured environments)
 
 ```bash
 python3 ai_repo_assessor.py
@@ -158,3 +204,4 @@ This example supports the BSSw Fellowship project:
 **"Sustainable AI: Best Practices for Reproducible Scientific Software Development"**
 
 by demonstrating how local AI models can assist in evaluating reproducibility and sustainability practices for scientific software and HPC workflows.
+
