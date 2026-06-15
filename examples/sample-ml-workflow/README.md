@@ -84,63 +84,17 @@ https://github.com/pytorch/pytorch
 
 # Requirements
 
-- Python 3
-- Ollama
-- Gemma model (automatically downloaded if missing)
+* Python 3
+* Ollama
+* Gemma model (automatically downloaded if missing)
 
 ---
-# Quick Start for Preconfigured Environments
 
 # Quick Start
 
 Many researchers and HPC users already have Python, Ollama, and the required model installed in their environment.
 
-If your system is already configured, simply run:
-If Python, Ollama, and the Gemma model are already installed in your environment, you do not need to install or download anything.
-
-Simply run:
-
-```bash
-python3 ai_repo_assessor.py
-
----
-# One-Time Setup for New Environments
-
-If you are using a new system that does not already have the required Python package, install it with:
-
-```bash
-pip3 install -r requirements.txt
-
-----
-
-# Install Ollama
-
-Download Ollama from:
-
-https://ollama.com/download
-
----
-
-# Download Gemma Model
-
-The script can automatically download the model if it is missing, but you may also install it manually:
-
-```bash
-ollama pull gemma3:1b
-```
-
-You may also use:
-
-```bash
-ollama pull gemma3:4b
-```
-
-for improved response quality.
-
----
-
-# Run the Tool
-(Update README for HPC and preconfigured environments)
+If Python, Ollama, and the Gemma model are already installed, simply run:
 
 ```bash
 python3 ai_repo_assessor.py
@@ -175,16 +129,26 @@ https://ollama.com/download
 
 ## Download the Gemma Model
 
+The script can automatically download the model if it is missing, but you may also install it manually:
+
 ```bash
 ollama pull gemma3:4b
 ```
 
-The script can also download the model automatically if it is not already installed.
+---
 
 # Run the Tool
 
 ```bash
 python3 ai_repo_assessor.py
+```
+
+---
+
+# Example Input
+
+```text
+https://github.com/kokkos/kokkos
 ```
 
 ---
