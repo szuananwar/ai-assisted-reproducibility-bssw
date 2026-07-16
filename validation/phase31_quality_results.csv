@@ -1,0 +1,4 @@
+repository,presence_percent,quality_percent,quality_possible,quality_band,hpc_applicable
+BuildTest,55.0,69.0,100,Moderate quality gaps,True
+NumPy,55.0,76.5,85,Good quality signals,False
+Brain Tumor Viskores ViT,30.0,21.0,100,Substantial quality gaps,True
