@@ -1,0 +1,284 @@
+[
+  {
+    "repository": "BuildTest",
+    "url": "https://github.com/buildtesters/buildtest.git",
+    "purpose": "HPC-focused testing framework",
+    "domain": "hpc-simulation",
+    "score": 55,
+    "possible": 110,
+    "percent": 50.0,
+    "band": "Moderate reproducibility risk",
+    "findings": [
+      {
+        "label": "Documentation",
+        "status": "PASS",
+        "earned": 15,
+        "possible": 15,
+        "found_paths": [
+          "README.rst"
+        ],
+        "recommendation": "Keep README.rst maintained."
+      },
+      {
+        "label": "Dependency specification",
+        "status": "PASS",
+        "earned": 15,
+        "possible": 15,
+        "found_paths": [
+          "requirements.txt",
+          "pyproject.toml"
+        ],
+        "recommendation": "Keep requirements.txt, pyproject.toml maintained."
+      },
+      {
+        "label": "Reproducible environment",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 10,
+        "found_paths": [],
+        "recommendation": "Add a reproducible environment or lock file."
+      },
+      {
+        "label": "HPC software stack",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 10,
+        "found_paths": [],
+        "recommendation": "Add Spack or BuildTest configuration."
+      },
+      {
+        "label": "Automated tests",
+        "status": "PASS",
+        "earned": 15,
+        "possible": 15,
+        "found_paths": [
+          "tests",
+          "tox.ini"
+        ],
+        "recommendation": "Keep tests, tox.ini maintained."
+      },
+      {
+        "label": "Container recipe",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 15,
+        "found_paths": [],
+        "recommendation": "Add a Docker/Podman or Apptainer/Singularity recipe."
+      },
+      {
+        "label": "Experiment/provenance tracking",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 10,
+        "found_paths": [],
+        "recommendation": "Add experiment or provenance tracking."
+      },
+      {
+        "label": "License",
+        "status": "PASS",
+        "earned": 10,
+        "possible": 10,
+        "found_paths": [
+          "LICENSE"
+        ],
+        "recommendation": "Keep LICENSE maintained."
+      },
+      {
+        "label": "Scheduler configuration",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 5,
+        "found_paths": [],
+        "recommendation": "Document the batch scheduler configuration."
+      },
+      {
+        "label": "Compiler/runtime metadata",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 5,
+        "found_paths": [],
+        "recommendation": "Record compiler, MPI, accelerator, and module metadata."
+      }
+    ]
+  },
+  {
+    "repository": "NumPy",
+    "url": "https://github.com/numpy/numpy.git",
+    "purpose": "Mature scientific Python library",
+    "domain": "general",
+    "score": 55,
+    "possible": 100,
+    "percent": 55.0,
+    "band": "Moderate reproducibility risk",
+    "findings": [
+      {
+        "label": "Documentation",
+        "status": "PASS",
+        "earned": 15,
+        "possible": 15,
+        "found_paths": [
+          "README.md"
+        ],
+        "recommendation": "Keep README.md maintained."
+      },
+      {
+        "label": "Dependency specification",
+        "status": "PASS",
+        "earned": 15,
+        "possible": 15,
+        "found_paths": [
+          "pyproject.toml"
+        ],
+        "recommendation": "Keep pyproject.toml maintained."
+      },
+      {
+        "label": "Reproducible environment",
+        "status": "PASS",
+        "earned": 10,
+        "possible": 10,
+        "found_paths": [
+          "environment.yml"
+        ],
+        "recommendation": "Keep environment.yml maintained."
+      },
+      {
+        "label": "HPC software stack",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 10,
+        "found_paths": [],
+        "recommendation": "Add Spack or BuildTest configuration."
+      },
+      {
+        "label": "Automated tests",
+        "status": "PASS",
+        "earned": 15,
+        "possible": 15,
+        "found_paths": [
+          "pytest.ini"
+        ],
+        "recommendation": "Keep pytest.ini maintained."
+      },
+      {
+        "label": "Container recipe",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 15,
+        "found_paths": [],
+        "recommendation": "Add a Docker/Podman or Apptainer/Singularity recipe."
+      },
+      {
+        "label": "Experiment/provenance tracking",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 10,
+        "found_paths": [],
+        "recommendation": "Add experiment or provenance tracking."
+      },
+      {
+        "label": "License",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 10,
+        "found_paths": [],
+        "recommendation": "Add a license."
+      }
+    ]
+  },
+  {
+    "repository": "Brain Tumor Viskores ViT",
+    "url": "https://github.com/szuananwar/brain-tumor-viskores-vit.git",
+    "purpose": "Domain-specific AI/HPC scientific workflow",
+    "domain": "biomedical",
+    "score": 30,
+    "possible": 110,
+    "percent": 27.3,
+    "band": "High reproducibility risk",
+    "findings": [
+      {
+        "label": "Documentation",
+        "status": "PASS",
+        "earned": 15,
+        "possible": 15,
+        "found_paths": [
+          "README.md"
+        ],
+        "recommendation": "Keep README.md maintained."
+      },
+      {
+        "label": "Dependency specification",
+        "status": "PASS",
+        "earned": 15,
+        "possible": 15,
+        "found_paths": [
+          "requirements.txt"
+        ],
+        "recommendation": "Keep requirements.txt maintained."
+      },
+      {
+        "label": "Reproducible environment",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 10,
+        "found_paths": [],
+        "recommendation": "Add a reproducible environment or lock file."
+      },
+      {
+        "label": "HPC software stack",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 10,
+        "found_paths": [],
+        "recommendation": "Add Spack or BuildTest configuration."
+      },
+      {
+        "label": "Automated tests",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 15,
+        "found_paths": [],
+        "recommendation": "Add executable tests."
+      },
+      {
+        "label": "Container recipe",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 15,
+        "found_paths": [],
+        "recommendation": "Add a Docker/Podman or Apptainer/Singularity recipe."
+      },
+      {
+        "label": "Experiment/provenance tracking",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 10,
+        "found_paths": [],
+        "recommendation": "Add experiment or provenance tracking."
+      },
+      {
+        "label": "License",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 10,
+        "found_paths": [],
+        "recommendation": "Add a license."
+      },
+      {
+        "label": "Data documentation",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 5,
+        "found_paths": [],
+        "recommendation": "Document dataset provenance, privacy, and intended use."
+      },
+      {
+        "label": "Random seed control",
+        "status": "MISSING",
+        "earned": 0,
+        "possible": 5,
+        "found_paths": [],
+        "recommendation": "Record random seeds and experiment parameters."
+      }
+    ]
+  }
+]
