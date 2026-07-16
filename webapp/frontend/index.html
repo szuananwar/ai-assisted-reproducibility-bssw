@@ -25,14 +25,9 @@
       <h2>Assess a public GitHub repository</h2>
       <form id="assessment-form">
         <label for="repository-url">GitHub repository URL</label>
-        <input
-          id="repository-url"
-          name="repository-url"
-          type="url"
+        <input id="repository-url" name="repository-url" type="url"
           value="https://github.com/szuananwar/ai-assisted-reproducibility-bssw"
-          placeholder="https://github.com/owner/repository"
-          required
-        />
+          placeholder="https://github.com/owner/repository" required />
 
         <div class="options">
           <label class="check-row">
@@ -47,7 +42,6 @@
 
         <button id="submit-button" type="submit">Assess Repository</button>
       </form>
-
       <div id="status" class="status" aria-live="polite"></div>
     </section>
 
@@ -61,6 +55,7 @@
         <div class="download-actions">
           <a id="html-report" class="secondary-button" target="_blank">Open HTML Report</a>
           <a id="json-report" class="secondary-button" target="_blank">Open JSON Report</a>
+          <a id="pdf-report" class="secondary-button" target="_blank">Download PDF Report</a>
         </div>
       </div>
 
@@ -85,15 +80,7 @@
         <h3>Reproducibility Checklist & Scoring Rubric</h3>
         <div class="table-wrap">
           <table id="presence-table">
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Status</th>
-                <th>Score</th>
-                <th>Evidence</th>
-                <th>Recommendation</th>
-              </tr>
-            </thead>
+            <thead><tr><th>Category</th><th>Status</th><th>Score</th><th>Evidence</th><th>Recommendation</th></tr></thead>
             <tbody></tbody>
           </table>
         </div>
@@ -104,15 +91,7 @@
         <div id="quality-bars" class="bar-list"></div>
         <div class="table-wrap">
           <table id="quality-table">
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Status</th>
-                <th>Score</th>
-                <th>Evidence</th>
-                <th>Recommendation</th>
-              </tr>
-            </thead>
+            <thead><tr><th>Category</th><th>Status</th><th>Score</th><th>Evidence</th><th>Recommendation</th></tr></thead>
             <tbody></tbody>
           </table>
         </div>
@@ -123,12 +102,9 @@
           <h3>Top Deterministic Priorities</h3>
           <div id="deterministic-priorities"></div>
         </section>
-
         <section class="panel">
           <h3>Grounded AI Priorities</h3>
-          <div id="ai-priorities">
-            <p class="muted">AI was not requested for this assessment.</p>
-          </div>
+          <div id="ai-priorities"><p class="muted">AI was not requested for this assessment.</p></div>
         </section>
       </div>
 
@@ -143,10 +119,7 @@
     </section>
   </main>
 
-  <footer>
-    <p>ReproPilot • Sustainable AI for Reproducible Scientific Software</p>
-  </footer>
-
+  <footer><p>ReproPilot • Sustainable AI for Reproducible Scientific Software</p></footer>
   <script src="/static/app.js"></script>
 </body>
 </html>

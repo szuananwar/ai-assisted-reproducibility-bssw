@@ -1,0 +1,13 @@
+services:
+  repropilot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - repropilot-results:/app/webapp/results
+    restart: unless-stopped
+
+volumes:
+  repropilot-results:
