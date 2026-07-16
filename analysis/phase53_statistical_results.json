@@ -1,0 +1,74 @@
+{
+  "sample_size": 30,
+  "domains": [
+    "ai-ml",
+    "climate-earth",
+    "computational-biology",
+    "hpc",
+    "medical-ai"
+  ],
+  "correlations": {
+    "pearson": {
+      "r": 0.4071866394409032,
+      "p": 0.025531359462889147
+    },
+    "spearman": {
+      "rho": 0.3601847644364147,
+      "p": 0.05056253624079395
+    }
+  },
+  "quality": {
+    "levene": {
+      "statistic": 0.2574560563036775,
+      "p": 0.9023340792156264
+    },
+    "anova": {
+      "statistic": 0.6929724467824496,
+      "p": 0.6038152664117058,
+      "eta_squared": 0.09980918865717116
+    },
+    "kruskal_wallis": {
+      "statistic": 2.7797314340826498,
+      "p": 0.5953364696761161,
+      "epsilon_squared": 0.0
+    },
+    "shapiro_by_domain": {
+      "ai-ml": {
+        "statistic": 0.96014762634556,
+        "pvalue": 0.8208776680622675
+      },
+      "climate-earth": {
+        "statistic": 0.8982884383527404,
+        "pvalue": 0.3639119596261344
+      },
+      "computational-biology": {
+        "statistic": 0.9718088458189544,
+        "pvalue": 0.9043577395676641
+      },
+      "hpc": {
+        "statistic": 0.9095332480143682,
+        "pvalue": 0.43333278482023496
+      },
+      "medical-ai": {
+        "statistic": 0.8966296436003778,
+        "pvalue": 0.3543915188256993
+      }
+    }
+  },
+  "presence": {
+    "levene": {
+      "statistic": 0.2616279069767441,
+      "p": 0.8997411219051105
+    },
+    "anova": {
+      "statistic": 0.893906020558003,
+      "p": 0.48221366031707025,
+      "eta_squared": 0.12512846865364857
+    },
+    "kruskal_wallis": {
+      "statistic": 2.546745514522484,
+      "p": 0.636285299363655,
+      "epsilon_squared": 0.0
+    }
+  }
+}
