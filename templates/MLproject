@@ -1,0 +1,6 @@
+name: repropilot
+entry_points:
+  assess:
+    parameters:
+      project_path: {type: path}
+    command: "python -m checker.reproducibility_checker {project_path}"

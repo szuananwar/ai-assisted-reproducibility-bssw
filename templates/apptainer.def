@@ -1,1 +1,10 @@
-
+Bootstrap: docker
+From: python:3.11-slim
+%files
+    requirements.txt /opt/repropilot/requirements.txt
+%post
+    pip install --no-cache-dir -r /opt/repropilot/requirements.txt
+%environment
+    export PYTHONPATH=/opt/repropilot:$PYTHONPATH
+%runscript
+    exec python "$@"

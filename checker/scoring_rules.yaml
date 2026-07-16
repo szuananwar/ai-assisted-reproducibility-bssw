@@ -1,1 +1,10 @@
-
+version: 1
+base_rules:
+  documentation: {points: 15, paths: [README.md, README.rst]}
+  dependencies: {points: 15, paths: [requirements.txt, pyproject.toml]}
+  environment: {points: 10, paths: [environment.yml, environment.yaml, conda-lock.yml, poetry.lock, uv.lock]}
+  hpc_stack: {points: 10, paths: [spack.yaml, spack.lock, buildtest.yml, buildtest.yaml]}
+  testing: {points: 15, paths: [tests, test, pytest.ini, tox.ini]}
+  container: {points: 15, paths: [Dockerfile, Containerfile, apptainer.def, Singularity]}
+  tracking: {points: 10, paths: [MLproject, mlruns, dvc.yaml, params.yaml, provenance.json]}
+  license: {points: 10, paths: [LICENSE, LICENSE.md, COPYING]}
