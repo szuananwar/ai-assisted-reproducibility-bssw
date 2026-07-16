@@ -1,0 +1,11 @@
+{
+  "repositories_requested": 30,
+  "repositories_with_valid_ai": 1,
+  "repositories_failed_or_invalid": 29,
+  "top1_agreement_rate": 1,
+  "mean_top3_overlap_count": 1,
+  "mean_jaccard_similarity": 0.333,
+  "mean_precision": 1.0,
+  "mean_recall": 0.3333,
+  "mean_f1": 0.5
+}

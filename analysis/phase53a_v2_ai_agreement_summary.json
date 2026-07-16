@@ -1,0 +1,12 @@
+{
+  "repositories_requested": 30,
+  "valid_ai_outputs": 28,
+  "invalid_ai_outputs": 2,
+  "valid_output_rate": 0.9333333333333333,
+  "top1_agreement_rate": 0.10714285714285714,
+  "mean_top3_overlap_count": 1.1071428571428572,
+  "mean_jaccard_similarity": 0.3131035714285714,
+  "mean_precision": 0.5119035714285715,
+  "mean_recall": 0.3690428571428571,
+  "mean_f1": 0.4261892857142857
+}

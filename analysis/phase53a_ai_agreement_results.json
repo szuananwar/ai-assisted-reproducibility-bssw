@@ -1,0 +1,883 @@
+[
+  {
+    "repository": "BuildTest",
+    "domain": "hpc",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Provenance quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Provenance quality",
+      "Container quality",
+      "HPC portability quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting property name enclosed in double quotes: line 2 column 3 (char 4)"
+    }
+  },
+  {
+    "repository": "Spack",
+    "domain": "hpc",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "HPC portability quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "HPC portability quality",
+      "Provenance quality",
+      "Container quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting value: line 10 column 20 (char 297)"
+    }
+  },
+  {
+    "repository": "Kokkos",
+    "domain": "hpc",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Dependency quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Dependency quality",
+      "HPC portability quality",
+      "Provenance quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "AI recommendations failed evidence-grounding validation.",
+      "raw": {
+        "recommendations": [
+          {
+            "priority": 1,
+            "label": "Exact quality finding label",
+            "evidence": [
+              "Exact evidence string from the supplied findings"
+            ],
+            "action": "Implement automated unit tests and integration testing for core functions.",
+            "rationale": "*The `readme_quality` finding emphasizes a need to expand documentation with executable tests, directly supporting this action.*"
+          },
+          {
+            "priority": 1,
+            "label": "Exact quality finding label",
+            "evidence": [
+              "Exact evidence string from the supplied findings"
+            ],
+            "action": "Add machine-readable dependencies using tools like `conda`, `pip`, or a dependency management service (e.g., Artifactory).  Consider validating the dependencies for accuracy to ensure reproducibility.",
+            "rationale": "*The 'dependency_quality' finding points out requiring explicit configuration of software and hardware dependencies, which necessitates adding this capability.*"
+          },
+          {
+            "priority": 1,
+            "label": "Exact quality finding label",
+            "evidence": [
+              "Exactly the `hpc_test_quality` finding"
+            ],
+            "action": "Refactor code to be more easily testable by including clear unit tests and integration testing methods.",
+            "rationale": "*'container_quality' finding identifies concerns related with container setup. This is an essential action to perform in order for better reproducibility.*"
+          }
+        ],
+        "limitations": [
+          "One concise limitation: Automated test coverage primarily focuses on unit tests."
+        ]
+      },
+      "model": "gemma3:1b"
+    }
+  },
+  {
+    "repository": "PETSc",
+    "domain": "hpc",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "Provenance quality",
+      "HPC portability quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting ',' delimiter: line 6 column 82 (char 268)"
+    }
+  },
+  {
+    "repository": "MFEM",
+    "domain": "hpc",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Dependency quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Dependency quality",
+      "HPC portability quality",
+      "Provenance quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting ',' delimiter: line 24 column 41 (char 926)"
+    }
+  },
+  {
+    "repository": "hypre",
+    "domain": "hpc",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "HPC portability quality",
+      "Provenance quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "AI recommendations failed evidence-grounding validation.",
+      "raw": {
+        "recommendations": [
+          {
+            "priority": 1,
+            "label": "Exact quality finding label",
+            "evidence": [
+              "Exact evidence string from the supplied findings"
+            ],
+            "action": "Add a reproducible environment. This will streamline testing and ensuring consistent results across different systems.",
+            "rationale": "The presence of dependencies (dependencies_finding) highlights the requirement for a reusable, isolated environment. A reproducible environment significantly streamlines the development process for automated testing, stability and reproducibility across systems and versions."
+          }
+        ],
+        "limitations": [
+          "One concise limitation"
+        ]
+      },
+      "model": "gemma3:1b"
+    }
+  },
+  {
+    "repository": "scikit-learn",
+    "domain": "ai-ml",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Dependency quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Dependency quality",
+      "Provenance quality",
+      "Container quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting property name enclosed in double quotes: line 13 column 5 (char 335)"
+    }
+  },
+  {
+    "repository": "XGBoost",
+    "domain": "ai-ml",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "Provenance quality",
+      "HPC portability quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "AI recommendations failed evidence-grounding validation.",
+      "raw": {
+        "recommendations": [
+          "Implement a reproducible environment to ensure consistent test runs.",
+          "Expand the documentation regarding dependencies and their associated requirements.",
+          "Add a container recipe that defines a dedicated, lockable environment.",
+          "Document lineage throughout the project."
+        ],
+        "limitrations": [
+          "Focus only on the requested findings."
+        ]
+      },
+      "model": "gemma3:1b"
+    }
+  },
+  {
+    "repository": "PyTorch Lightning",
+    "domain": "ai-ml",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "Test quality",
+      "Provenance quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "AI response is missing a recommendations list.",
+      "raw": {
+        "$\u0440\u043e\u0438\u0434": [
+          "Maintain README.md maintained.",
+          "",
+          "Keep requirements.txt, pyproject.toml maintained."
+        ],
+        "limitations": []
+      },
+      "model": "gemma3:1b"
+    }
+  },
+  {
+    "repository": "Transformers",
+    "domain": "ai-ml",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Provenance quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Provenance quality",
+      "Dependency quality",
+      "README quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting value: line 22 column 11 (char 616)"
+    }
+  },
+  {
+    "repository": "MONAI",
+    "domain": "ai-ml",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "HPC portability quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "HPC portability quality",
+      "Container quality",
+      "Provenance quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting ',' delimiter: line 37 column 3 (char 872)"
+    }
+  },
+  {
+    "repository": "CatBoost",
+    "domain": "ai-ml",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Provenance quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Provenance quality",
+      "README quality",
+      "Dependency quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting ',' delimiter: line 3 column 71 (char 95)"
+    }
+  },
+  {
+    "repository": "Biopython",
+    "domain": "computational-biology",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "Provenance quality",
+      "README quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting ',' delimiter: line 19 column 10 (char 859)"
+    }
+  },
+  {
+    "repository": "Scanpy",
+    "domain": "computational-biology",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "Provenance quality",
+      "Dependency quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting ',' delimiter: line 6 column 285 (char 632)"
+    }
+  },
+  {
+    "repository": "CellProfiler",
+    "domain": "computational-biology",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Provenance quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Provenance quality",
+      "Test quality",
+      "Dependency quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting ',' delimiter: line 26 column 4 (char 1079)"
+    }
+  },
+  {
+    "repository": "Snakemake",
+    "domain": "computational-biology",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Provenance quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Provenance quality",
+      "Container quality",
+      "Dependency quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "AI recommendations failed evidence-grounding validation.",
+      "raw": {
+        "recommendations": [
+          {
+            "priority": 1,
+            "label": "Provenance quality",
+            "evidence": [
+              "Exact evidence string from the supplied findings: 'Maintain detailed log information and timestamps.'"
+            ],
+            "action": "Introduce a comprehensive logging mechanism within the codebase. Utilize structured logs for all critical events and actions.",
+            "rationane": "Capturing detailed, timely, and location-aware log data is essential for reproducibility, troubleshooting, debugging, and auditing."
+          }
+        ],
+        "limitations": []
+      },
+      "model": "gemma3:1b"
+    }
+  },
+  {
+    "repository": "Nextflow",
+    "domain": "computational-biology",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Test quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Test quality",
+      "Dependency quality",
+      "Provenance quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Invalid control character at: line 16 column 39 (char 440)"
+    }
+  },
+  {
+    "repository": "QIIME2",
+    "domain": "computational-biology",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "Provenance quality",
+      "Dependency quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting property name enclosed in double quotes: line 22 column 5 (char 773)"
+    }
+  },
+  {
+    "repository": "xarray",
+    "domain": "climate-earth",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Dependency quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Dependency quality",
+      "Provenance quality",
+      "README quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting property name enclosed in double quotes: line 5 column 3 (char 47)"
+    }
+  },
+  {
+    "repository": "Pangeo",
+    "domain": "climate-earth",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "Provenance quality",
+      "README quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "AI recommendations failed evidence-grounding validation.",
+      "raw": {
+        "recommendations": [
+          {
+            "priority": 1,
+            "label": "Exact quality finding label",
+            "evidence": [
+              "exact evidence string from the provided findings"
+            ],
+            "action": "Refactor documentation for clarity and reintroduction of dependencies.",
+            "rationale": "The 'documentation' finding indicates a critical knowledge gap. This action directly addresses this by clarifying dependencies, ensuring all necessary infrastructure setups are documented, and highlighting potential bottlenecks.  Implementing consistent documenting conventions is crucial to reduce rework and confusion."
+          }
+        ],
+        "limitations": [
+          "Focus should be on the key documentation-related issues reported by 'documentation'"
+        ]
+      },
+      "model": "gemma3:1b"
+    }
+  },
+  {
+    "repository": "ESMValTool",
+    "domain": "climate-earth",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "HPC portability quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "HPC portability quality",
+      "Test quality",
+      "Dependency quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting property name enclosed in double quotes: line 19 column 24 (char 614)"
+    }
+  },
+  {
+    "repository": "netCDF4-python",
+    "domain": "climate-earth",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "Provenance quality",
+      "Dependency quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "AI recommendations failed evidence-grounding validation.",
+      "raw": {
+        "recommendations": [
+          {
+            "priority": 1,
+            "label": "Exact quality finding label",
+            "evidence": [
+              "(This is placeholder evidence. No specific data was provided.)"
+            ],
+            "action": "Update README.md and documentation to address potential issues detailed in the quality findings.",
+            "rationale": "Addressing reported `quality_findings` indicates a need for enhanced documentation, especially concerning dependency specifications (from `dependencies` & `hpc_stack`), environment variables, test coverage, and containerization practices."
+          }
+        ],
+        "limitations": []
+      },
+      "model": "gemma3:1b"
+    }
+  },
+  {
+    "repository": "Iris",
+    "domain": "climate-earth",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "Provenance quality",
+      "Dependency quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting property name enclosed in double quotes: line 30 column 5 (char 869)"
+    }
+  },
+  {
+    "repository": "MetPy",
+    "domain": "climate-earth",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Provenance quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Provenance quality",
+      "README quality",
+      "Dependency quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting ':' delimiter: line 4 column 70 (char 101)"
+    }
+  },
+  {
+    "repository": "nnU-Net",
+    "domain": "medical-ai",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "Provenance quality",
+      "Dependency quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting value: line 9 column 3 (char 653)"
+    }
+  },
+  {
+    "repository": "TorchIO",
+    "domain": "medical-ai",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "Dependency quality",
+      "Provenance quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting value: line 26 column 60 (char 853)"
+    }
+  },
+  {
+    "repository": "SimpleITK",
+    "domain": "medical-ai",
+    "ai_valid": true,
+    "top1_agreement": 1,
+    "top3_overlap_count": 1,
+    "jaccard_similarity": 0.333,
+    "precision": 1.0,
+    "recall": 0.3333,
+    "f1": 0.5,
+    "deterministic_priority_1": "Provenance quality",
+    "ai_priority_1": "Provenance quality",
+    "deterministic_labels": [
+      "Provenance quality",
+      "HPC portability quality",
+      "Test quality"
+    ],
+    "ai_labels": [
+      "Provenance quality"
+    ],
+    "overlap_labels": [
+      "Provenance quality"
+    ],
+    "ai_result": {
+      "ok": true,
+      "recommendations": [
+        {
+          "label": "Provenance quality",
+          "priority": 1,
+          "evidence": [
+            "/Users/suzananwar/Downloads/ai-assisted-reproducibility-bssw/benchmark/repos/simpleitk/readme.md",
+            "Readme.md"
+          ],
+          "action": "Improve README documentation for experimental code, setup, and testing practices.",
+          "rationale": "The README is crucial for reproducibility; improvements here ensure better transparency of experiments by ensuring all required information is present and well-formatted."
+        }
+      ],
+      "limitations": [],
+      "model": "gemma3:1b"
+    }
+  },
+  {
+    "repository": "TotalSegmentator",
+    "domain": "medical-ai",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Provenance quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Provenance quality",
+      "Dependency quality",
+      "Container quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Expecting value: line 26 column 7 (char 748)"
+    }
+  },
+  {
+    "repository": "MONAI Label",
+    "domain": "medical-ai",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "HPC portability quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "HPC portability quality",
+      "Test quality",
+      "Provenance quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "AI recommendations failed evidence-grounding validation.",
+      "raw": {
+        "recommendations": [
+          {
+            "priority": 1,
+            "label": "Documentation",
+            "evidence": [
+              "README.md",
+              "plugins/ohifv3/README.md"
+            ],
+            "action": "Document the installation process for all dependencies within the codebase."
+          },
+          {
+            "priority": 1,
+            "label": "Dependencies",
+            "evidence": [
+              "requirements.txt",
+              "pyproject.toml"
+            ],
+            "action": "Refactor dependency file structures and ensure consistent naming convention across project files."
+          }
+        ],
+        "limitations": []
+      },
+      "model": "gemma3:1b"
+    }
+  },
+  {
+    "repository": "Brain Tumor Viskores ViT",
+    "domain": "medical-ai",
+    "ai_valid": false,
+    "top1_agreement": 0,
+    "top3_overlap_count": 0,
+    "jaccard_similarity": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "deterministic_priority_1": "Container quality",
+    "ai_priority_1": "",
+    "deterministic_labels": [
+      "Container quality",
+      "Test quality",
+      "Provenance quality"
+    ],
+    "ai_labels": [],
+    "overlap_labels": [],
+    "ai_result": {
+      "ok": false,
+      "message": "Invalid JSON from Ollama: Extra data: line 3 column 93 (char 117)"
+    }
+  }
+]
