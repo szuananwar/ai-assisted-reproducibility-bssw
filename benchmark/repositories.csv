@@ -1,0 +1,31 @@
+name,domain,url,hpc_applicable
+BuildTest,hpc,https://github.com/buildtesters/buildtest.git,True
+Spack,hpc,https://github.com/spack/spack.git,True
+Kokkos,hpc,https://github.com/kokkos/kokkos.git,True
+PETSc,hpc,https://gitlab.com/petsc/petsc.git,True
+MFEM,hpc,https://github.com/mfem/mfem.git,True
+hypre,hpc,https://github.com/hypre-space/hypre.git,True
+scikit-learn,ai-ml,https://github.com/scikit-learn/scikit-learn.git,False
+XGBoost,ai-ml,https://github.com/dmlc/xgboost.git,True
+PyTorch Lightning,ai-ml,https://github.com/Lightning-AI/pytorch-lightning.git,False
+Transformers,ai-ml,https://github.com/huggingface/transformers.git,False
+MONAI,ai-ml,https://github.com/Project-MONAI/MONAI.git,True
+CatBoost,ai-ml,https://github.com/catboost/catboost.git,False
+Biopython,computational-biology,https://github.com/biopython/biopython.git,False
+Scanpy,computational-biology,https://github.com/scverse/scanpy.git,False
+CellProfiler,computational-biology,https://github.com/CellProfiler/CellProfiler.git,False
+Snakemake,computational-biology,https://github.com/snakemake/snakemake.git,False
+Nextflow,computational-biology,https://github.com/nextflow-io/nextflow.git,False
+QIIME2,computational-biology,https://github.com/qiime2/qiime2.git,False
+xarray,climate-earth,https://github.com/pydata/xarray.git,False
+Pangeo,climate-earth,https://github.com/pangeo-data/pangeo.git,False
+ESMValTool,climate-earth,https://github.com/ESMValGroup/ESMValTool.git,True
+netCDF4-python,climate-earth,https://github.com/Unidata/netcdf4-python.git,False
+Iris,climate-earth,https://github.com/SciTools/iris.git,False
+MetPy,climate-earth,https://github.com/Unidata/MetPy.git,False
+nnU-Net,medical-ai,https://github.com/MIC-DKFZ/nnUNet.git,False
+TorchIO,medical-ai,https://github.com/TorchIO-project/torchio.git,False
+SimpleITK,medical-ai,https://github.com/SimpleITK/SimpleITK.git,True
+TotalSegmentator,medical-ai,https://github.com/wasserth/TotalSegmentator.git,False
+MONAI Label,medical-ai,https://github.com/Project-MONAI/MONAILabel.git,True
+Brain Tumor Viskores ViT,medical-ai,https://github.com/szuananwar/brain-tumor-viskores-vit.git,True
