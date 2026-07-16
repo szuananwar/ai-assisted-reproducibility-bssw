@@ -1,0 +1,4 @@
+repository,quality_percent,ai_ok,top3_overlap_count,jaccard_similarity
+BuildTest,69.0,False,0,0.0
+NumPy,76.5,False,0,0.0
+Brain Tumor Viskores ViT,21.0,False,0,0.0
