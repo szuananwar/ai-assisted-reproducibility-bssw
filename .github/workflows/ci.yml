@@ -1,0 +1,84 @@
+name: ReproPilot CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+          - "3.9"
+          - "3.10"
+          - "3.11"
+          - "3.12"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Upgrade packaging tools
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+
+      - name: Install core dependencies
+        run: |
+          python -m pip install -r requirements.txt
+
+      - name: Install web dependencies
+        run: |
+          python -m pip install -r webapp/backend/requirements.txt
+
+      - name: Run core tests
+        run: |
+          python -m pytest tests -v
+
+      - name: Run web API tests
+        env:
+          PYTHONPATH: webapp/backend:.
+        run: |
+          python -m pytest webapp/backend/tests -v
+
+      - name: Validate notebook structure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import nbformat
+
+          notebooks = [
+              Path("notebooks/AI_Assisted_Reproducibility_Checker.ipynb"),
+              Path("notebooks/AI_Assisted_Reproducibility_Checker_GUI.ipynb"),
+          ]
+
+          for notebook_path in notebooks:
+              notebook = nbformat.read(notebook_path, as_version=4)
+              nbformat.validate(notebook)
+              print(f"Validated: {notebook_path}")
+          PY
+
+      - name: Import ReproPilot modules
+        run: |
+          python - <<'PY'
+          from checker.reproducibility_checker import assess_repository
+          from checker.quality_assessor import assess_repository_quality
+
+          print("Core ReproPilot imports succeeded.")
+          PY
