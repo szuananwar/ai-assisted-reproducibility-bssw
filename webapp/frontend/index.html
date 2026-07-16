@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReproPilot</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">Scientific Software Reproducibility</p>
+        <h1>ReproPilot</h1>
+        <p class="subtitle">
+          Deterministic assessment and grounded local AI for scientific software and HPC workflows.
+        </p>
+      </div>
+      <div class="badge">BSSw 2026</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Assess a public GitHub repository</h2>
+      <form id="assessment-form">
+        <label for="repository-url">GitHub repository URL</label>
+        <input
+          id="repository-url"
+          name="repository-url"
+          type="url"
+          value="https://github.com/szuananwar/ai-assisted-reproducibility-bssw"
+          placeholder="https://github.com/owner/repository"
+          required
+        />
+
+        <div class="options">
+          <label class="check-row">
+            <input id="hpc-applicable" type="checkbox" checked />
+            Apply HPC-specific checks
+          </label>
+          <label class="check-row">
+            <input id="use-ai" type="checkbox" />
+            Run grounded local AI
+          </label>
+        </div>
+
+        <button id="submit-button" type="submit">Assess Repository</button>
+      </form>
+
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <section id="results" class="hidden">
+      <div class="results-header">
+        <div>
+          <p class="eyebrow">Assessment Results</p>
+          <h2 id="repository-name"></h2>
+          <p><a id="repository-link" target="_blank" rel="noreferrer"></a></p>
+        </div>
+        <div class="download-actions">
+          <a id="html-report" class="secondary-button" target="_blank">Open HTML Report</a>
+          <a id="json-report" class="secondary-button" target="_blank">Open JSON Report</a>
+        </div>
+      </div>
+
+      <div class="score-grid">
+        <article class="score-card">
+          <span>Presence Score</span>
+          <strong id="presence-score">—</strong>
+          <div class="meter"><div id="presence-meter"></div></div>
+        </article>
+        <article class="score-card">
+          <span>Quality Score</span>
+          <strong id="quality-score">—</strong>
+          <div class="meter"><div id="quality-meter"></div></div>
+        </article>
+        <article class="score-card">
+          <span>Interpretation</span>
+          <strong id="quality-band">—</strong>
+        </article>
+      </div>
+
+      <section class="panel">
+        <h3>Reproducibility Checklist & Scoring Rubric</h3>
+        <div class="table-wrap">
+          <table id="presence-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Score</th>
+                <th>Evidence</th>
+                <th>Recommendation</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Artifact Quality Results</h3>
+        <div id="quality-bars" class="bar-list"></div>
+        <div class="table-wrap">
+          <table id="quality-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Score</th>
+                <th>Evidence</th>
+                <th>Recommendation</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="two-column">
+        <section class="panel">
+          <h3>Top Deterministic Priorities</h3>
+          <div id="deterministic-priorities"></div>
+        </section>
+
+        <section class="panel">
+          <h3>Grounded AI Priorities</h3>
+          <div id="ai-priorities">
+            <p class="muted">AI was not requested for this assessment.</p>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel note">
+        <h3>Interpretation</h3>
+        <p>
+          ReproPilot measures repository reproducibility readiness. It does not guarantee
+          scientific correctness, numerical validity, workflow execution, data availability,
+          or hardware equivalence.
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>ReproPilot • Sustainable AI for Reproducible Scientific Software</p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
