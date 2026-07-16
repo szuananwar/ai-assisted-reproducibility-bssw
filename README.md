@@ -180,7 +180,8 @@ ai-assisted-reproducibility-bssw/
 │   └── scoring_rules.yaml
 │
 ├── notebooks/
-│   └── AI_Assisted_Reproducibility_Checker.ipynb
+│   |── AI_Assisted_Reproducibility_Checker.ipynb
+|   └── AI_Assisted_Reproducibility_Checker_GUI.ipynb
 │
 ├── examples/
 │   └── sample-ml-workflow/
@@ -223,12 +224,11 @@ ai-assisted-reproducibility-bssw/
 │   └── publication_tables/
 │
 └── webapp/
-    └── backend/
-        ├── app/
-        ├── tests/
-        ├── requirements.txt
-        ├── Dockerfile
-        └── README.md
+├── frontend/
+│   ├── index.html
+│   ├── styles.css
+│   └── app.js
+└── backend/
 ```
 
 ---
@@ -389,7 +389,7 @@ Each figure is available as a 300-DPI PNG and vector PDF.
 
 ---
 
-## Run the Web API
+## Run the Web Dashboard and API
 
 Create and activate a web environment:
 
@@ -414,9 +414,12 @@ PYTHONPATH=webapp/backend:. uvicorn app.main:app --reload
 Open the interactive API documentation:
 
 ```text
+http://127.0.0.1:8000/
+```
+The API documentation remains available at:
+'''text
 http://127.0.0.1:8000/docs
 ```
-
 Health check:
 
 ```text
@@ -491,7 +494,7 @@ Scores should be interpreted alongside expert review and, where possible, runtim
 * Phase 5.4: Publication figures — complete
 * Phase 5.5: Manuscript drafting — in progress
 * Phase 6.1: FastAPI web MVP — complete
-* Phase 6.2: Interactive frontend — planned
+* Phase 6.2: Interactive web dashboard — complete
 
 ---
 
