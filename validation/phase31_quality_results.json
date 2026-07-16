@@ -1,0 +1,673 @@
+[
+  {
+    "repository": "BuildTest",
+    "presence": {
+      "project_path": "/Users/suzananwar/Downloads/ai-assisted-reproducibility-bssw/validation/repos/buildtest",
+      "domain": "general",
+      "score": 55,
+      "possible": 100,
+      "percent": 55.0,
+      "band": "Moderate reproducibility risk",
+      "findings": [
+        {
+          "key": "documentation",
+          "label": "Documentation",
+          "earned": 15,
+          "possible": 15,
+          "found_paths": [
+            "README.rst"
+          ],
+          "status": "PASS",
+          "recommendation": "Keep README.rst maintained."
+        },
+        {
+          "key": "dependencies",
+          "label": "Dependency specification",
+          "earned": 15,
+          "possible": 15,
+          "found_paths": [
+            "requirements.txt",
+            "pyproject.toml"
+          ],
+          "status": "PASS",
+          "recommendation": "Keep requirements.txt, pyproject.toml maintained."
+        },
+        {
+          "key": "environment",
+          "label": "Reproducible environment",
+          "earned": 0,
+          "possible": 10,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add a reproducible environment or lock file."
+        },
+        {
+          "key": "hpc_stack",
+          "label": "HPC software stack",
+          "earned": 0,
+          "possible": 10,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add Spack or BuildTest configuration."
+        },
+        {
+          "key": "testing",
+          "label": "Automated tests",
+          "earned": 15,
+          "possible": 15,
+          "found_paths": [
+            "tests",
+            "tox.ini"
+          ],
+          "status": "PASS",
+          "recommendation": "Keep tests, tox.ini maintained."
+        },
+        {
+          "key": "container",
+          "label": "Container recipe",
+          "earned": 0,
+          "possible": 15,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add a Docker/Podman or Apptainer/Singularity recipe."
+        },
+        {
+          "key": "tracking",
+          "label": "Experiment/provenance tracking",
+          "earned": 0,
+          "possible": 10,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add experiment or provenance tracking."
+        },
+        {
+          "key": "license",
+          "label": "License",
+          "earned": 10,
+          "possible": 10,
+          "found_paths": [
+            "LICENSE"
+          ],
+          "status": "PASS",
+          "recommendation": "Keep LICENSE maintained."
+        }
+      ]
+    },
+    "quality": {
+      "project_path": "/Users/suzananwar/Downloads/ai-assisted-reproducibility-bssw/validation/repos/buildtest",
+      "quality_score": 69,
+      "quality_possible": 100,
+      "quality_percent": 69.0,
+      "quality_band": "Moderate quality gaps",
+      "quality_findings": [
+        {
+          "key": "readme_quality",
+          "label": "README quality",
+          "earned": 16,
+          "possible": 20,
+          "percent": 80.0,
+          "evidence": [
+            "README.rst",
+            "installation instructions",
+            "execution example",
+            "testing instructions",
+            "citation guidance"
+          ],
+          "recommendation": "Expand documentation to cover installation, execution, tests, citation, and reproducibility.",
+          "applicable": true,
+          "status": "PARTIAL"
+        },
+        {
+          "key": "dependency_quality",
+          "label": "Dependency quality",
+          "earned": 13,
+          "possible": 15,
+          "percent": 86.7,
+          "evidence": [
+            "requirements.txt",
+            "pyproject.toml",
+            "buildtest/schemas/examples/script.schema.json/valid/environment.yml",
+            "buildtest/executors/setup.py",
+            "tests/buildsystem/valid_buildspecs/environment.yml",
+            "docs/requirements.txt",
+            "tutorials/environment.yml",
+            "version constraints detected",
+            "runtime version declared"
+          ],
+          "recommendation": "Constrain key dependencies, declare runtime versions, and provide a lock file where practical.",
+          "applicable": true,
+          "status": "PARTIAL"
+        },
+        {
+          "key": "container_quality",
+          "label": "Container quality",
+          "earned": 9,
+          "possible": 15,
+          "percent": 60.0,
+          "evidence": [
+            "scripts/spack_container/Dockerfile",
+            "scripts/pbs/Dockerfile",
+            "versioned base image detected"
+          ],
+          "recommendation": "Pin the base image, install declared dependencies, and define a reproducible entry point.",
+          "applicable": true,
+          "status": "PARTIAL"
+        },
+        {
+          "key": "test_quality",
+          "label": "Test quality",
+          "earned": 16,
+          "possible": 20,
+          "percent": 80.0,
+          "evidence": [
+            "tests/test_stats.py",
+            "tests/test_summit.py",
+            "tests/test_exceptions.py",
+            "tests/test_torque.py",
+            "tests/test_log.py",
+            "tests/test_pbs.py",
+            ".github/workflows/urlchecker.yml",
+            ".github/workflows/regression.yml",
+            ".github/workflows/style.yml",
+            ".github/workflows/build_container.yml",
+            ".github/workflows/installation.yml",
+            ".github/workflows/nightly_regression.yml",
+            ".github/workflows/regressiontest_container.yml",
+            ".github/workflows/spack_regression_test.yml",
+            ".github/workflows/shellcheck.yml",
+            ".github/workflows/cli_tutorial_check.yml",
+            "assertions detected",
+            "automated test execution configuration detected"
+          ],
+          "recommendation": "Add scientific/numerical correctness tests and run them automatically in CI.",
+          "applicable": true,
+          "status": "PARTIAL"
+        },
+        {
+          "key": "provenance_quality",
+          "label": "Provenance quality",
+          "earned": 5,
+          "possible": 15,
+          "percent": 33.3,
+          "evidence": [
+            ".zenodo.json"
+          ],
+          "recommendation": "Record parameters, seeds, outputs, artifacts, and software/data versions.",
+          "applicable": true,
+          "status": "PARTIAL"
+        },
+        {
+          "key": "hpc_quality",
+          "label": "HPC portability quality",
+          "earned": 10,
+          "possible": 15,
+          "percent": 66.7,
+          "evidence": [
+            "examples/spack/example/spack.yaml",
+            "examples/spack/example/spack.yaml",
+            "docs/aws_examples/compiler_list_yaml.txt",
+            "MPI metadata detected",
+            "compiler metadata detected"
+          ],
+          "recommendation": "Document compiler, MPI, accelerator, scheduler resources, and module/software-stack details.",
+          "applicable": true,
+          "status": "PARTIAL"
+        }
+      ],
+      "priority_actions": [
+        {
+          "label": "Provenance quality",
+          "recommendation": "Record parameters, seeds, outputs, artifacts, and software/data versions."
+        },
+        {
+          "label": "Container quality",
+          "recommendation": "Pin the base image, install declared dependencies, and define a reproducible entry point."
+        },
+        {
+          "label": "HPC portability quality",
+          "recommendation": "Document compiler, MPI, accelerator, scheduler resources, and module/software-stack details."
+        }
+      ]
+    }
+  },
+  {
+    "repository": "NumPy",
+    "presence": {
+      "project_path": "/Users/suzananwar/Downloads/ai-assisted-reproducibility-bssw/validation/repos/numpy",
+      "domain": "general",
+      "score": 55,
+      "possible": 100,
+      "percent": 55.0,
+      "band": "Moderate reproducibility risk",
+      "findings": [
+        {
+          "key": "documentation",
+          "label": "Documentation",
+          "earned": 15,
+          "possible": 15,
+          "found_paths": [
+            "README.md"
+          ],
+          "status": "PASS",
+          "recommendation": "Keep README.md maintained."
+        },
+        {
+          "key": "dependencies",
+          "label": "Dependency specification",
+          "earned": 15,
+          "possible": 15,
+          "found_paths": [
+            "pyproject.toml"
+          ],
+          "status": "PASS",
+          "recommendation": "Keep pyproject.toml maintained."
+        },
+        {
+          "key": "environment",
+          "label": "Reproducible environment",
+          "earned": 10,
+          "possible": 10,
+          "found_paths": [
+            "environment.yml"
+          ],
+          "status": "PASS",
+          "recommendation": "Keep environment.yml maintained."
+        },
+        {
+          "key": "hpc_stack",
+          "label": "HPC software stack",
+          "earned": 0,
+          "possible": 10,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add Spack or BuildTest configuration."
+        },
+        {
+          "key": "testing",
+          "label": "Automated tests",
+          "earned": 15,
+          "possible": 15,
+          "found_paths": [
+            "pytest.ini"
+          ],
+          "status": "PASS",
+          "recommendation": "Keep pytest.ini maintained."
+        },
+        {
+          "key": "container",
+          "label": "Container recipe",
+          "earned": 0,
+          "possible": 15,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add a Docker/Podman or Apptainer/Singularity recipe."
+        },
+        {
+          "key": "tracking",
+          "label": "Experiment/provenance tracking",
+          "earned": 0,
+          "possible": 10,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add experiment or provenance tracking."
+        },
+        {
+          "key": "license",
+          "label": "License",
+          "earned": 0,
+          "possible": 10,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add a license."
+        }
+      ]
+    },
+    "quality": {
+      "project_path": "/Users/suzananwar/Downloads/ai-assisted-reproducibility-bssw/validation/repos/numpy",
+      "quality_score": 65,
+      "quality_possible": 85,
+      "quality_percent": 76.5,
+      "quality_band": "Good quality signals",
+      "quality_findings": [
+        {
+          "key": "readme_quality",
+          "label": "README quality",
+          "earned": 20,
+          "possible": 20,
+          "percent": 100.0,
+          "evidence": [
+            "README.md",
+            "pixi-packages/README.md",
+            "numpy/linalg/lapack_lite/README.rst",
+            "numpy/ma/README.rst",
+            "numpy/_core/src/common/simd/README.md",
+            "benchmarks/README.rst",
+            "doc/release/upcoming_changes/README.rst",
+            "installation instructions",
+            "execution example",
+            "testing instructions",
+            "citation guidance",
+            "reproducibility guidance"
+          ],
+          "recommendation": "Expand documentation to cover installation, execution, tests, citation, and reproducibility.",
+          "applicable": true,
+          "status": "PASS"
+        },
+        {
+          "key": "dependency_quality",
+          "label": "Dependency quality",
+          "earned": 13,
+          "possible": 15,
+          "percent": 86.7,
+          "evidence": [
+            "environment.yml",
+            "pyproject.toml",
+            "tools/swig/test/setup.py",
+            "numpy/_core/tests/examples/cython/setup.py",
+            "numpy/_core/tests/examples/limited_api/setup.py",
+            "numpy/f2py/setup.cfg",
+            "requirements/test_requirements.txt",
+            "requirements/typing_requirements.txt",
+            "requirements/build_requirements.txt",
+            "requirements/ci_requirements.txt",
+            "requirements/pkgconf_requirements.txt",
+            "requirements/delvewheel_requirements.txt",
+            "requirements/release_requirements.txt",
+            "requirements/ci32_requirements.txt",
+            "requirements/all_requirements.txt",
+            "requirements/doc_requirements.txt",
+            "requirements/emscripten_test_requirements.txt",
+            "requirements/linter_requirements.txt",
+            "version constraints detected",
+            "runtime version declared"
+          ],
+          "recommendation": "Constrain key dependencies, declare runtime versions, and provide a lock file where practical.",
+          "applicable": true,
+          "status": "PARTIAL"
+        },
+        {
+          "key": "container_quality",
+          "label": "Container quality",
+          "earned": 12,
+          "possible": 15,
+          "percent": 80.0,
+          "evidence": [
+            ".devcontainer/devcontainer.json",
+            "versioned base image detected",
+            "execution entry point detected"
+          ],
+          "recommendation": "Pin the base image, install declared dependencies, and define a reproducible entry point.",
+          "applicable": true,
+          "status": "PARTIAL"
+        },
+        {
+          "key": "test_quality",
+          "label": "Test quality",
+          "earned": 20,
+          "possible": 20,
+          "percent": 100.0,
+          "evidence": [
+            "numpy/tests/test_warnings.py",
+            "numpy/tests/test_matlib.py",
+            "numpy/tests/test_ctypeslib.py",
+            "numpy/tests/test_lazyloading.py",
+            "numpy/tests/test__all__.py",
+            "numpy/tests/test_numpy_version.py",
+            "numpy/tests/test_reloading.py",
+            "numpy/tests/test_public_api.py",
+            "numpy/tests/test_scripts.py",
+            "numpy/tests/test_configtool.py",
+            "numpy/tests/test_numpy_config.py",
+            "numpy/linalg/tests/test_linalg.py",
+            "numpy/linalg/tests/test_deprecations.py",
+            "numpy/linalg/tests/test_regression.py",
+            "numpy/ma/tests/test_old_ma.py",
+            "numpy/ma/tests/test_core.py",
+            "numpy/ma/tests/test_deprecations.py",
+            "numpy/ma/tests/test_subclassing.py",
+            "numpy/ma/tests/test_extras.py",
+            "numpy/ma/tests/test_arrayobject.py",
+            ".github/workflows/cygwin.yml",
+            ".github/workflows/emscripten.yml",
+            ".github/workflows/windows.yml",
+            ".github/workflows/mypy_primer_comment.yml",
+            ".github/workflows/linux_riscv64.yml",
+            ".github/workflows/labeler.yml",
+            ".github/workflows/wheels.yml",
+            ".github/workflows/linux-ibm.yml",
+            ".github/workflows/scorecards.yml",
+            ".github/workflows/codeql.yml",
+            "assertions detected",
+            "numerical tolerance checks detected",
+            "automated test execution configuration detected"
+          ],
+          "recommendation": "Add scientific/numerical correctness tests and run them automatically in CI.",
+          "applicable": true,
+          "status": "PASS"
+        },
+        {
+          "key": "provenance_quality",
+          "label": "Provenance quality",
+          "earned": 0,
+          "possible": 15,
+          "percent": 0.0,
+          "evidence": [],
+          "recommendation": "Record parameters, seeds, outputs, software/data versions, and citation metadata.",
+          "applicable": true,
+          "status": "MISSING"
+        },
+        {
+          "key": "hpc_quality",
+          "label": "HPC portability quality",
+          "earned": 0,
+          "possible": 15,
+          "percent": null,
+          "evidence": [],
+          "recommendation": "Not applicable for this repository.",
+          "applicable": false,
+          "status": "N/A"
+        }
+      ],
+      "priority_actions": [
+        {
+          "label": "Provenance quality",
+          "recommendation": "Record parameters, seeds, outputs, software/data versions, and citation metadata."
+        },
+        {
+          "label": "Container quality",
+          "recommendation": "Pin the base image, install declared dependencies, and define a reproducible entry point."
+        },
+        {
+          "label": "Dependency quality",
+          "recommendation": "Constrain key dependencies, declare runtime versions, and provide a lock file where practical."
+        }
+      ]
+    }
+  },
+  {
+    "repository": "Brain Tumor Viskores ViT",
+    "presence": {
+      "project_path": "/Users/suzananwar/Downloads/ai-assisted-reproducibility-bssw/validation/repos/brain-tumor-viskores-vit",
+      "domain": "general",
+      "score": 30,
+      "possible": 100,
+      "percent": 30.0,
+      "band": "High reproducibility risk",
+      "findings": [
+        {
+          "key": "documentation",
+          "label": "Documentation",
+          "earned": 15,
+          "possible": 15,
+          "found_paths": [
+            "README.md"
+          ],
+          "status": "PASS",
+          "recommendation": "Keep README.md maintained."
+        },
+        {
+          "key": "dependencies",
+          "label": "Dependency specification",
+          "earned": 15,
+          "possible": 15,
+          "found_paths": [
+            "requirements.txt"
+          ],
+          "status": "PASS",
+          "recommendation": "Keep requirements.txt maintained."
+        },
+        {
+          "key": "environment",
+          "label": "Reproducible environment",
+          "earned": 0,
+          "possible": 10,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add a reproducible environment or lock file."
+        },
+        {
+          "key": "hpc_stack",
+          "label": "HPC software stack",
+          "earned": 0,
+          "possible": 10,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add Spack or BuildTest configuration."
+        },
+        {
+          "key": "testing",
+          "label": "Automated tests",
+          "earned": 0,
+          "possible": 15,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add executable tests."
+        },
+        {
+          "key": "container",
+          "label": "Container recipe",
+          "earned": 0,
+          "possible": 15,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add a Docker/Podman or Apptainer/Singularity recipe."
+        },
+        {
+          "key": "tracking",
+          "label": "Experiment/provenance tracking",
+          "earned": 0,
+          "possible": 10,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add experiment or provenance tracking."
+        },
+        {
+          "key": "license",
+          "label": "License",
+          "earned": 0,
+          "possible": 10,
+          "found_paths": [],
+          "status": "MISSING",
+          "recommendation": "Add a license."
+        }
+      ]
+    },
+    "quality": {
+      "project_path": "/Users/suzananwar/Downloads/ai-assisted-reproducibility-bssw/validation/repos/brain-tumor-viskores-vit",
+      "quality_score": 21,
+      "quality_possible": 100,
+      "quality_percent": 21.0,
+      "quality_band": "Substantial quality gaps",
+      "quality_findings": [
+        {
+          "key": "readme_quality",
+          "label": "README quality",
+          "earned": 16,
+          "possible": 20,
+          "percent": 80.0,
+          "evidence": [
+            "README.md",
+            "installation instructions",
+            "execution example",
+            "testing instructions",
+            "reproducibility guidance"
+          ],
+          "recommendation": "Expand documentation to cover installation, execution, tests, citation, and reproducibility.",
+          "applicable": true,
+          "status": "PARTIAL"
+        },
+        {
+          "key": "dependency_quality",
+          "label": "Dependency quality",
+          "earned": 5,
+          "possible": 15,
+          "percent": 33.3,
+          "evidence": [
+            "requirements.txt"
+          ],
+          "recommendation": "Constrain key dependencies, declare runtime versions, and provide a lock file where practical.",
+          "applicable": true,
+          "status": "PARTIAL"
+        },
+        {
+          "key": "container_quality",
+          "label": "Container quality",
+          "earned": 0,
+          "possible": 15,
+          "percent": 0.0,
+          "evidence": [],
+          "recommendation": "Add a Docker/Podman or Apptainer/Singularity recipe, or mark this category not applicable.",
+          "applicable": true,
+          "status": "MISSING"
+        },
+        {
+          "key": "test_quality",
+          "label": "Test quality",
+          "earned": 0,
+          "possible": 20,
+          "percent": 0.0,
+          "evidence": [],
+          "recommendation": "Add executable tests and automated CI validation.",
+          "applicable": true,
+          "status": "MISSING"
+        },
+        {
+          "key": "provenance_quality",
+          "label": "Provenance quality",
+          "earned": 0,
+          "possible": 15,
+          "percent": 0.0,
+          "evidence": [],
+          "recommendation": "Record parameters, seeds, outputs, software/data versions, and citation metadata.",
+          "applicable": true,
+          "status": "MISSING"
+        },
+        {
+          "key": "hpc_quality",
+          "label": "HPC portability quality",
+          "earned": 0,
+          "possible": 15,
+          "percent": 0.0,
+          "evidence": [],
+          "recommendation": "Add Spack, scheduler, compiler, MPI, accelerator, or module metadata.",
+          "applicable": true,
+          "status": "MISSING"
+        }
+      ],
+      "priority_actions": [
+        {
+          "label": "Container quality",
+          "recommendation": "Add a Docker/Podman or Apptainer/Singularity recipe, or mark this category not applicable."
+        },
+        {
+          "label": "Test quality",
+          "recommendation": "Add executable tests and automated CI validation."
+        },
+        {
+          "label": "Provenance quality",
+          "recommendation": "Record parameters, seeds, outputs, software/data versions, and citation metadata."
+        }
+      ]
+    }
+  }
+]
