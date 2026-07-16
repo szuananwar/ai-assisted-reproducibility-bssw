@@ -1,0 +1,105 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repropilot"
+version = "0.1.0"
+description = "Grounded AI reproducibility assessment for scientific software and HPC workflows."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Suzan Anwar", email = "sanwar@philander.edu" }
+]
+keywords = [
+  "reproducibility",
+  "scientific-software",
+  "research-software-engineering",
+  "high-performance-computing",
+  "grounded-ai"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Software Development :: Quality Assurance"
+]
+dependencies = [
+  "PyYAML>=6.0"
+]
+
+[project.optional-dependencies]
+notebook = [
+  "jupyter==1.1.1",
+  "nbclient==0.10.2",
+  "nbformat==5.10.4",
+  "ipywidgets>=8.1",
+  "pandas>=2.2",
+  "matplotlib>=3.8",
+  "numpy>=2.0"
+]
+
+web = [
+  "fastapi==0.116.1",
+  "uvicorn[standard]==0.35.0",
+  "pydantic==2.11.7",
+  "httpx==0.28.1"
+]
+
+analysis = [
+  "pandas>=2.2",
+  "matplotlib>=3.8",
+  "numpy>=2.0",
+  "scipy>=1.10"
+]
+
+dev = [
+  "pytest==8.4.2",
+  "build>=1.2",
+  "twine>=5.1"
+]
+
+all = [
+  "jupyter==1.1.1",
+  "nbclient==0.10.2",
+  "nbformat==5.10.4",
+  "ipywidgets>=8.1",
+  "pandas>=2.2",
+  "matplotlib>=3.8",
+  "numpy>=2.0",
+  "scipy>=1.10",
+  "fastapi==0.116.1",
+  "uvicorn[standard]==0.35.0",
+  "pydantic==2.11.7",
+  "httpx==0.28.1",
+  "pytest==8.4.2",
+  "build>=1.2",
+  "twine>=5.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/szuananwar/ai-assisted-reproducibility-bssw"
+Repository = "https://github.com/szuananwar/ai-assisted-reproducibility-bssw"
+Issues = "https://github.com/szuananwar/ai-assisted-reproducibility-bssw/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["checker*"]
+
+[tool.setuptools.package-data]
+checker = ["scoring_rules.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = [
+  "tests",
+  "webapp/backend/tests"
+]

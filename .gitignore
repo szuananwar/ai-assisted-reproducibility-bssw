@@ -39,3 +39,11 @@ htmlcov/
 # Generated ReproPilot assessment reports
 notebooks/latest_repropilot_assessment.json
 webapp/results/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Temporary package test environment
+.venv-package-test/
