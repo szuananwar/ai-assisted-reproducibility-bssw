@@ -1,0 +1,6 @@
+spack:
+  specs:
+    - python@3.11
+  concretizer:
+    unify: true
+  view: true
