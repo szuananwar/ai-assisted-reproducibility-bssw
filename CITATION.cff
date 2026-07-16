@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use ReproPilot in your research, please cite this software."
+title: "ReproPilot: Grounded AI Reproducibility Assessment for Scientific Software"
+type: software
+version: 0.1.0
+date-released: 2026-07-16
+authors:
+  - family-names: Anwar
+    given-names: Suzan
+    affiliation: Philander Smith University
+    email: sanwar@philander.edu
+repository-code: "https://github.com/szuananwar/ai-assisted-reproducibility-bssw"
+url: "https://github.com/szuananwar/ai-assisted-reproducibility-bssw"
+license: MIT
+keywords:
+  - reproducibility
+  - scientific software
+  - research software engineering
+  - high-performance computing
+  - grounded AI
+  - software quality
+abstract: >-
+  ReproPilot is an open-source framework for assessing reproducibility
+  artifact presence and quality in scientific software repositories.
+  It combines deterministic scoring, HPC-aware checks, grounded local
+  AI prioritization, benchmarking, statistical analysis, a notebook GUI,
+  a web dashboard, and a command-line interface.
