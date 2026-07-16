@@ -1,0 +1,4 @@
+repository,presence_percent,quality_percent,quality_band
+BuildTest,55.0,45.0,Substantial quality gaps
+NumPy,55.0,24.0,Substantial quality gaps
+Brain Tumor Viskores ViT,30.0,21.0,Substantial quality gaps
