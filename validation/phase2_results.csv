@@ -1,0 +1,4 @@
+repository,url,purpose,domain,score,possible,percent,band
+BuildTest,https://github.com/buildtesters/buildtest.git,HPC-focused testing framework,hpc-simulation,55,110,50.0,Moderate reproducibility risk
+NumPy,https://github.com/numpy/numpy.git,Mature scientific Python library,general,55,100,55.0,Moderate reproducibility risk
+Brain Tumor Viskores ViT,https://github.com/szuananwar/brain-tumor-viskores-vit.git,Domain-specific AI/HPC scientific workflow,biomedical,30,110,27.3,High reproducibility risk
