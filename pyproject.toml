@@ -84,6 +84,10 @@ all = [
   "twine>=5.1"
 ]
 
+
+[project.scripts]
+repropilot = "checker.cli:main"
+
 [project.urls]
 Homepage = "https://github.com/szuananwar/ai-assisted-reproducibility-bssw"
 Repository = "https://github.com/szuananwar/ai-assisted-reproducibility-bssw"
