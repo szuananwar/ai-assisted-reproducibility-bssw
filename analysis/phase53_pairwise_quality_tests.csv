@@ -1,0 +1,11 @@
+domain_1,domain_2,u_statistic,p_raw,p_holm,significant_0_05
+ai-ml,climate-earth,21.5,0.6303555263618644,1.0,False
+ai-ml,computational-biology,24.0,0.3939393939393939,1.0,False
+ai-ml,hpc,24.0,0.3939393939393939,1.0,False
+ai-ml,medical-ai,27.0,0.17965367965367965,1.0,False
+climate-earth,computational-biology,21.0,0.6991341991341992,1.0,False
+climate-earth,hpc,22.0,0.5887445887445888,1.0,False
+climate-earth,medical-ai,25.0,0.30952380952380953,1.0,False
+computational-biology,hpc,15.0,0.6991341991341992,1.0,False
+computational-biology,medical-ai,19.5,0.8725590308923818,1.0,False
+hpc,medical-ai,22.0,0.5887445887445888,1.0,False
