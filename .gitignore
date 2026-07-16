@@ -35,3 +35,7 @@ htmlcov/
 
 # Logs
 *.log
+
+# Generated ReproPilot assessment reports
+notebooks/latest_repropilot_assessment.json
+webapp/results/
