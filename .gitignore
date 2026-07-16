@@ -1,8 +1,37 @@
+# Python
 __pycache__/
 *.py[cod]
-.ipynb_checkpoints/
 .pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
 .venv/
+.venv-web/
+
+# Jupyter
+*.ipynb_checkpoints
+
+# macOS
 .DS_Store
+
+# Temporary cloned repositories
 validation/repos/
 benchmark/repos/
+
+# Generated web reports
+webapp/backend/results/
+
+# Python coverage
+.coverage
+htmlcov/
+
+# IDEs
+.vscode/
+.idea/
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
