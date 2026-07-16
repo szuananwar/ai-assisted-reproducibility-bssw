@@ -6,18 +6,40 @@ import re
 
 
 IGNORED_PARTS = {
-    ".git", ".venv", "venv", "__pycache__", "node_modules",
-    ".pytest_cache", ".mypy_cache", "dist", "build"
+    ".git",
+    ".venv",
+    "venv",
+    "__pycache__",
+    "node_modules",
+    ".pytest_cache",
+    ".mypy_cache",
+    "dist",
+    "build",
+}
+
+IGNORED_RELATIVE_PREFIXES = {
+    Path("benchmark/repos"),
+    Path("validation/repos"),
 }
 
 
+def _is_ignored(root: Path, path: Path) -> bool:
+    relative = path.relative_to(root)
+
+    if any(part in IGNORED_PARTS for part in relative.parts):
+        return True
+
+    return any(
+        relative == prefix or prefix in relative.parents
+        for prefix in IGNORED_RELATIVE_PREFIXES
+    )
+
 def _iter_files(root: Path) -> Iterable[Path]:
     for path in root.rglob("*"):
-        if any(part in IGNORED_PARTS for part in path.parts):
+        if _is_ignored(root, path):
             continue
         if path.is_file():
             yield path
-
 
 def _read(path: Path, limit: int = 200_000) -> str:
     try:
@@ -37,19 +59,22 @@ def _find_named(root: Path, names: set[str]) -> List[Path]:
         if path.name.lower() in lowered and path.stat().st_size > 0
     ]
 
-
 def _find_globs(root: Path, patterns: Iterable[str]) -> List[Path]:
     found = []
     seen = set()
+
     for pattern in patterns:
         for path in root.rglob(pattern):
-            if any(part in IGNORED_PARTS for part in path.parts):
+            if _is_ignored(root, path):
                 continue
+
             if path.is_file() and path.stat().st_size > 0:
                 resolved = path.resolve()
+
                 if resolved not in seen:
                     seen.add(resolved)
                     found.append(path)
+
     return found
 
 

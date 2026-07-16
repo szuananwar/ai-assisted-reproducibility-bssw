@@ -47,3 +47,6 @@ dist/
 
 # Temporary package test environment
 .venv-package-test/
+
+# Temporary CLI test environment
+.venv-cli-test/

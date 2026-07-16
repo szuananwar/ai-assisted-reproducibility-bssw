@@ -30,3 +30,41 @@ def test_recursive_hpc_detection(tmp_path):
     result = assess_repository_quality(tmp_path, hpc_applicable=True)
     hpc = next(x for x in result["quality_findings"] if x["key"] == "hpc_quality")
     assert hpc["earned"] > 0
+
+def test_nested_benchmark_repositories_are_ignored(tmp_path):
+    from checker.quality_assessor import assess_repository_quality
+
+    # Main repository
+    (tmp_path / "README.md").write_text(
+        "# Main repository\n",
+        encoding="utf-8",
+    )
+
+    # Simulated benchmark repository
+    nested = tmp_path / "benchmark" / "repos" / "external-project"
+    nested.mkdir(parents=True)
+
+    (nested / "Dockerfile").write_text(
+        "FROM python:3.11\n",
+        encoding="utf-8",
+    )
+
+    (nested / "requirements.txt").write_text(
+        "numpy==2.0.0\n",
+        encoding="utf-8",
+    )
+
+    result = assess_repository_quality(
+        tmp_path,
+        hpc_applicable=False,
+    )
+
+    evidence = []
+
+    for finding in result["quality_findings"]:
+        evidence.extend(finding.get("evidence", []))
+
+    assert not any(
+        item.startswith("benchmark/repos/")
+        for item in evidence
+    )
