@@ -1,0 +1,138 @@
+{
+  "overall": {
+    "presence_percent": {
+      "count": 30,
+      "mean": 45.67,
+      "median": 40.0,
+      "min": 15.0,
+      "max": 70.0,
+      "stdev": 14.96
+    },
+    "quality_percent": {
+      "count": 30,
+      "mean": 60.43,
+      "median": 60.6,
+      "min": 21.0,
+      "max": 89.4,
+      "stdev": 15.73
+    },
+    "readme_quality": {
+      "count": 30,
+      "mean": 88.0,
+      "median": 100.0,
+      "min": 40.0,
+      "max": 100.0,
+      "stdev": 17.1
+    },
+    "dependency_quality": {
+      "count": 30,
+      "mean": 66.23,
+      "median": 66.7,
+      "min": 0.0,
+      "max": 100.0,
+      "stdev": 22.57
+    },
+    "container_quality": {
+      "count": 30,
+      "mean": 47.11,
+      "median": 60.0,
+      "min": 0.0,
+      "max": 100.0,
+      "stdev": 43.41
+    },
+    "test_quality": {
+      "count": 30,
+      "mean": 75.33,
+      "median": 90.0,
+      "min": 0.0,
+      "max": 100.0,
+      "stdev": 29.56
+    },
+    "provenance_quality": {
+      "count": 30,
+      "mean": 29.09,
+      "median": 43.3,
+      "min": 0.0,
+      "max": 73.3,
+      "stdev": 28.4
+    },
+    "file_count": {
+      "count": 30,
+      "mean": 2717.73,
+      "median": 1553.0,
+      "min": 109.0,
+      "max": 29705.0,
+      "stdev": 5550.69
+    },
+    "elapsed_seconds": {
+      "count": 30,
+      "mean": 4.15,
+      "median": 2.19,
+      "min": 0.26,
+      "max": 41.86,
+      "stdev": 7.51
+    }
+  },
+  "by_domain": {
+    "ai-ml": {
+      "presence_percent": {
+        "count": 6,
+        "mean": 47.5,
+        "median": 47.5
+      },
+      "quality_percent": {
+        "count": 6,
+        "mean": 67.85,
+        "median": 71.3
+      }
+    },
+    "climate-earth": {
+      "presence_percent": {
+        "count": 6,
+        "mean": 43.33,
+        "median": 47.5
+      },
+      "quality_percent": {
+        "count": 6,
+        "mean": 62.2,
+        "median": 65.4
+      }
+    },
+    "computational-biology": {
+      "presence_percent": {
+        "count": 6,
+        "mean": 50.0,
+        "median": 47.5
+      },
+      "quality_percent": {
+        "count": 6,
+        "mean": 58.63,
+        "median": 58.8
+      }
+    },
+    "hpc": {
+      "presence_percent": {
+        "count": 6,
+        "mean": 36.67,
+        "median": 40.0
+      },
+      "quality_percent": {
+        "count": 6,
+        "mean": 60.67,
+        "median": 61.5
+      }
+    },
+    "medical-ai": {
+      "presence_percent": {
+        "count": 6,
+        "mean": 50.83,
+        "median": 47.5
+      },
+      "quality_percent": {
+        "count": 6,
+        "mean": 52.82,
+        "median": 57.1
+      }
+    }
+  }
+}

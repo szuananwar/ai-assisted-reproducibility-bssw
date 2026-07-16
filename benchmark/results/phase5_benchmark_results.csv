@@ -1,0 +1,31 @@
+repository,domain,url,hpc_applicable,presence_percent,quality_percent,quality_possible,readme_quality,dependency_quality,container_quality,test_quality,provenance_quality,hpc_quality,file_count,elapsed_seconds,status
+BuildTest,hpc,https://github.com/buildtesters/buildtest.git,True,55.0,69.0,100,80.0,86.7,60.0,80.0,33.3,66.7,647,0.256,ok
+Spack,hpc,https://github.com/spack/spack.git,True,45.0,77.0,100,100.0,86.7,80.0,80.0,73.3,33.3,1805,2.264,ok
+Kokkos,hpc,https://github.com/kokkos/kokkos.git,True,25.0,49.0,100,100.0,0.0,60.0,60.0,53.3,0.0,1520,0.375,ok
+PETSc,hpc,https://gitlab.com/petsc/petsc.git,True,40.0,45.0,100,60.0,86.7,0.0,100.0,0.0,0.0,11414,7.099,ok
+MFEM,hpc,https://github.com/mfem/mfem.git,True,40.0,70.0,100,100.0,33.3,80.0,100.0,53.3,33.3,1586,2.165,ok
+hypre,hpc,https://github.com/hypre-space/hypre.git,True,15.0,54.0,100,100.0,66.7,0.0,80.0,53.3,0.0,2729,2.719,ok
+scikit-learn,ai-ml,https://github.com/scikit-learn/scikit-learn.git,False,40.0,80.0,85,100.0,53.3,80.0,100.0,53.3,,1826,2.08,ok
+XGBoost,ai-ml,https://github.com/dmlc/xgboost.git,True,40.0,41.0,100,100.0,86.7,0.0,40.0,0.0,0.0,1466,2.032,ok
+PyTorch Lightning,ai-ml,https://github.com/Lightning-AI/pytorch-lightning.git,False,55.0,54.1,85,100.0,66.7,0.0,40.0,53.3,,1082,1.937,ok
+Transformers,ai-ml,https://github.com/huggingface/transformers.git,False,55.0,89.4,85,100.0,86.7,100.0,100.0,53.3,,6328,5.46,ok
+MONAI,ai-ml,https://github.com/Project-MONAI/MONAI.git,True,70.0,65.0,100,80.0,86.7,53.3,100.0,53.3,0.0,1594,3.626,ok
+CatBoost,ai-ml,https://github.com/catboost/catboost.git,False,25.0,77.6,85,80.0,100.0,100.0,100.0,0.0,,29705,41.86,ok
+Biopython,computational-biology,https://github.com/biopython/biopython.git,False,55.0,57.6,85,80.0,86.7,0.0,100.0,0.0,,2443,2.649,ok
+Scanpy,computational-biology,https://github.com/scverse/scanpy.git,False,55.0,47.1,85,60.0,53.3,0.0,100.0,0.0,,695,1.555,ok
+CellProfiler,computational-biology,https://github.com/CellProfiler/CellProfiler.git,False,40.0,60.0,85,100.0,53.3,100.0,40.0,0.0,,1593,5.012,ok
+Snakemake,computational-biology,https://github.com/snakemake/snakemake.git,False,70.0,76.5,85,100.0,86.7,80.0,100.0,0.0,,2370,2.918,ok
+Nextflow,computational-biology,https://github.com/nextflow-io/nextflow.git,False,40.0,68.2,85,100.0,46.7,100.0,40.0,53.3,,2936,2.833,ok
+QIIME2,computational-biology,https://github.com/qiime2/qiime2.git,False,40.0,42.4,85,60.0,53.3,0.0,80.0,0.0,,429,0.97,ok
+xarray,climate-earth,https://github.com/pydata/xarray.git,False,40.0,75.3,85,80.0,53.3,80.0,100.0,53.3,,463,1.167,ok
+Pangeo,climate-earth,https://github.com/pangeo-data/pangeo.git,False,15.0,30.6,85,40.0,66.7,0.0,40.0,0.0,,109,0.7,ok
+ESMValTool,climate-earth,https://github.com/ESMValGroup/ESMValTool.git,True,55.0,59.0,100,100.0,53.3,80.0,40.0,73.3,0.0,2215,5.759,ok
+netCDF4-python,climate-earth,https://github.com/Unidata/netcdf4-python.git,False,55.0,56.5,85,100.0,53.3,0.0,100.0,0.0,,170,6.539,ok
+Iris,climate-earth,https://github.com/SciTools/iris.git,False,40.0,71.8,85,100.0,86.7,0.0,100.0,53.3,,2056,2.015,ok
+MetPy,climate-earth,https://github.com/Unidata/MetPy.git,False,55.0,80.0,85,60.0,86.7,100.0,100.0,53.3,,811,11.357,ok
+nnU-Net,medical-ai,https://github.com/MIC-DKFZ/nnUNet.git,False,40.0,47.1,85,100.0,53.3,0.0,60.0,0.0,,319,1.083,ok
+TorchIO,medical-ai,https://github.com/TorchIO-project/torchio.git,False,55.0,61.2,85,80.0,53.3,0.0,100.0,53.3,,365,2.211,ok
+SimpleITK,medical-ai,https://github.com/SimpleITK/SimpleITK.git,True,40.0,53.0,100,100.0,86.7,80.0,40.0,0.0,0.0,1720,1.276,ok
+TotalSegmentator,medical-ai,https://github.com/wasserth/TotalSegmentator.git,False,70.0,70.6,85,100.0,53.3,80.0,100.0,0.0,,383,1.626,ok
+MONAI Label,medical-ai,https://github.com/Project-MONAI/MONAILabel.git,True,70.0,64.0,100,100.0,86.7,100.0,40.0,53.3,0.0,642,2.228,ok
+Brain Tumor Viskores ViT,medical-ai,https://github.com/szuananwar/brain-tumor-viskores-vit.git,True,30.0,21.0,100,80.0,33.3,0.0,0.0,0.0,0.0,111,0.785,ok
