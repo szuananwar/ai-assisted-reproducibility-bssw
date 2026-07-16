@@ -1,11 +1,14 @@
 from pathlib import Path
+
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import FileResponse
+
 from app.models import AssessmentRequest, AssessmentResponse
 from app.services import cloned_repository, create_assessment_id, run_repropilot, write_reports
 
 router = APIRouter(prefix="/api")
 REPORT_DIR = Path(__file__).resolve().parents[2] / "results"
+
 
 @router.post("/assess", response_model=AssessmentResponse)
 def assess(request: AssessmentRequest):
@@ -16,16 +19,24 @@ def assess(request: AssessmentRequest):
             presence, quality, ai = run_repropilot(
                 repo_path, request.hpc_applicable, request.use_ai
             )
-            html_path, json_path = write_reports(
-                REPORT_DIR, assessment_id, repository_url, repo_name,
-                presence, quality, ai
+            html_path, json_path, pdf_path = write_reports(
+                REPORT_DIR,
+                assessment_id,
+                repository_url,
+                repo_name,
+                presence,
+                quality,
+                ai,
             )
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except RuntimeError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
     except Exception as exc:
-        raise HTTPException(status_code=500, detail=f"Assessment failed: {type(exc).__name__}: {exc}") from exc
+        raise HTTPException(
+            status_code=500,
+            detail=f"Assessment failed: {type(exc).__name__}: {exc}",
+        ) from exc
 
     return AssessmentResponse(
         assessment_id=assessment_id,
@@ -36,7 +47,9 @@ def assess(request: AssessmentRequest):
         ai=ai,
         html_report_path=f"/api/reports/{assessment_id}.html",
         json_report_path=f"/api/reports/{assessment_id}.json",
+        pdf_report_path=f"/api/reports/{assessment_id}.pdf",
     )
+
 
 @router.get("/reports/{filename}")
 def report(filename: str):

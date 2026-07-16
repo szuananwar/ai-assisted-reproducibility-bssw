@@ -135,6 +135,7 @@ form.addEventListener("submit", async event => {
 
     document.getElementById("html-report").href = data.html_report_path;
     document.getElementById("json-report").href = data.json_report_path;
+    document.getElementById("pdf-report").href = data.pdf_report_path;
 
     resultsSection.classList.remove("hidden");
     statusBox.className = "status success";

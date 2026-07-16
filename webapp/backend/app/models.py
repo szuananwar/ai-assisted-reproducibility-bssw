@@ -18,3 +18,4 @@ class AssessmentResponse(BaseModel):
     ai: Optional[Dict[str, Any]] = None
     html_report_path: str
     json_report_path: str
+    pdf_report_path: str
