@@ -32,16 +32,38 @@ def _github_clone_url(value: str) -> Tuple[str, str]:
 
 def _prepare_repository(source: str) -> Tuple[Path, Optional[Path], str]:
     local_path = Path(source).expanduser()
-    if local_path.is_dir():
+
+    if local_path.exists():
+        if not local_path.is_dir():
+            raise ValueError(
+                "The supplied local path exists but is not a directory: {}".format(
+                    local_path
+                )
+            )
+
         resolved = local_path.resolve()
         return resolved, None, resolved.name
+
+    if "://" not in source:
+        raise ValueError(
+            "Local repository path does not exist: {}".format(local_path)
+        )
 
     clone_url, repository_name = _github_clone_url(source)
     temporary_root = Path(tempfile.mkdtemp(prefix="repropilot-cli-"))
     destination = temporary_root / repository_name
+
     try:
         subprocess.run(
-            ["git", "clone", "--depth", "1", "--filter=blob:none", clone_url, str(destination)],
+            [
+                "git",
+                "clone",
+                "--depth",
+                "1",
+                "--filter=blob:none",
+                clone_url,
+                str(destination),
+            ],
             check=True,
             capture_output=True,
             text=True,
@@ -49,13 +71,21 @@ def _prepare_repository(source: str) -> Tuple[Path, Optional[Path], str]:
         )
     except subprocess.TimeoutExpired as exc:
         shutil.rmtree(temporary_root, ignore_errors=True)
-        raise RuntimeError("Repository cloning timed out after 180 seconds.") from exc
+        raise RuntimeError(
+            "Repository cloning timed out after 180 seconds."
+        ) from exc
     except subprocess.CalledProcessError as exc:
         shutil.rmtree(temporary_root, ignore_errors=True)
-        message = exc.stderr.strip() or exc.stdout.strip() or "Unknown Git error"
-        raise RuntimeError(f"Repository cloning failed: {message}") from exc
-    return destination, temporary_root, repository_name
+        message = (
+            exc.stderr.strip()
+            or exc.stdout.strip()
+            or "Unknown Git error"
+        )
+        raise RuntimeError(
+            "Repository cloning failed: {}".format(message)
+        ) from exc
 
+    return destination, temporary_root, repository_name
 
 def _build_report(source: str, project_path: Path, repository_name: str, domain: str, hpc_applicable: bool) -> Dict[str, Any]:
     presence = assess_repository(project_path, domain=domain)
