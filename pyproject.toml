@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "repropilot"
-version = "1.0.1"
+version = "1.1.0"
 description = "Grounded AI reproducibility assessment for scientific software and HPC workflows."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -46,10 +46,15 @@ notebook = [
   "numpy>=2.0"
 ]
 
+
+gui = [
+  "gradio>=4.44,<6"
+]
+
 web = [
   "fastapi==0.116.1",
   "uvicorn[standard]==0.35.0",
-  "pydantic==2.11.7",
+  "pydantic==2.10.6",
   "httpx==0.28.1",
   "fpdf2==2.8.3"
 ]
@@ -79,7 +84,7 @@ all = [
   "scipy>=1.10",
   "fastapi==0.116.1",
   "uvicorn[standard]==0.35.0",
-  "pydantic==2.11.7",
+  "pydantic==2.10.6",
   "httpx==0.28.1",
   "fpdf2==2.8.3",
   "pytest==8.4.2",
@@ -89,6 +94,7 @@ all = [
 
 [project.scripts]
 repropilot = "checker.cli:main"
+repropilot-gui = "checker.gui:main"
 
 [project.urls]
 Homepage = "https://github.com/szuananwar/ai-assisted-reproducibility-bssw"
