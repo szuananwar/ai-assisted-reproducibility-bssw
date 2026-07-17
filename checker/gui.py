@@ -11,7 +11,6 @@ import time
 from pathlib import Path
 from urllib.parse import urlparse
 
-import gradio as gr
 
 from checker.quality_assessor import assess_repository_quality
 from checker.reproducibility_checker import assess_repository
@@ -255,8 +254,16 @@ def assess_github_repository(
             shutil.rmtree(temporary_root, ignore_errors=True)
 
 
-def create_gui() -> gr.Blocks:
+def create_gui():
     """Construct and return the ReproPilot Gradio application."""
+
+    try:
+        import gradio as gr
+    except ImportError as exc:
+        raise RuntimeError(
+            'The GUI dependencies are not installed. '
+            'Install them with: python -m pip install -e ".[gui]"'
+        ) from exc
 
     with gr.Blocks(title="ReproPilot Repository Assessor") as application:
         gr.Markdown(
