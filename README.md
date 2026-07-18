@@ -421,13 +421,10 @@ The API documentation remains available at:
 http://127.0.0.1:8000/docs
 ```
 Health check:
-
 ```text
 http://127.0.0.1:8000/health
 ```
-
 Example API request:
-
 ```bash
 curl -X POST \
   "http://127.0.0.1:8000/api/assess" \
