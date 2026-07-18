@@ -404,22 +404,22 @@ Run the web tests:
 ```bash
 PYTHONPATH=webapp/backend:. python3 -m pytest webapp/backend/tests -v
 ```
-
 Start the FastAPI server:
 
 ```bash
 PYTHONPATH=webapp/backend:. uvicorn app.main:app --reload
 ```
-
 Open the interactive API documentation:
 
 ```text
 http://127.0.0.1:8000/
 ```
 The API documentation remains available at:
+
 '''text
 http://127.0.0.1:8000/docs
 ```
+
 Health check:
 ```text
 http://127.0.0.1:8000/health
