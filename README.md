@@ -416,7 +416,7 @@ http://127.0.0.1:8000/
 ```
 The API documentation remains available at:
 
-'''text
+```text
 http://127.0.0.1:8000/docs
 ```
 
