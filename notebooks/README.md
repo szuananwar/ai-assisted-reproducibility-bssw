@@ -130,22 +130,3 @@ The deterministic portions of the tutorials do not require Ollama.
 ## Relationship to the Best Practices Guide
 
 The tutorials correspond to the major topics in [`../guide/best-practices-guide.md`](../guide/best-practices-guide.md). Learners are encouraged to use the guide for conceptual background and the tutorial series for practical exercises.
-
-## Beta Testing and Feedback
-
-Milestone 2 requires the tutorial materials to be made available for beta testing and initial feedback. Reviewers should consider:
-
-- clarity of instructions;
-- setup difficulty;
-- technical correctness;
-- expected completion time;
-- usefulness to scientific software practitioners;
-- relevance across AI, HPC, and other scientific domains;
-- accessibility for students and new research software contributors; and
-- places where the tutorial depends too heavily on the ReproPilot case study.
-
-Feedback should be documented so it can be incorporated into the Milestone 3 revisions.
-
-## Milestone 2 Status
-
-This tutorial index and activity sequence constitute the organized Milestone 2 draft tutorial series. The next refinement is to convert the activity guides into additional standalone executable notebooks, beta-test them with users, and incorporate the resulting feedback before final publication in Milestone 3.
