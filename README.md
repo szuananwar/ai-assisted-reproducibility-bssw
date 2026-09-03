@@ -1,547 +1,135 @@
-# ReproPilot: Grounded AI Reproducibility Assessment for Scientific Software
+# AI-Assisted Reproducibility in Scientific Software
 
-ReproPilot is an open-source framework for assessing the reproducibility readiness of scientific software repositories and AI-enabled high-performance computing workflows.
+**2026 Better Scientific Software Fellowship Project**
 
-The project was developed as part of the 2026 Better Scientific Software Fellowship project:
+**Fellowship project:** *Sustainable AI: Best Practices for Reproducible Scientific Software Development*  
+**Fellow:** Suzan Anwar, Ph.D., Philander Smith University
 
-**Sustainable AI: Best Practices for Reproducible Scientific Software Development**
+## Project Overview
 
-ReproPilot combines transparent deterministic assessment, quality-aware repository analysis, grounded local large language model recommendations, statistical benchmarking, publication-quality visualization, and web-based repository assessment.
+This repository supports a 2026 Better Scientific Software (BSSw) Fellowship project investigating how artificial intelligence can assist reproducible and sustainable scientific software development, with particular attention to AI-enabled and high-performance computing (HPC) workflows.
 
-The framework is designed to help researchers, research software engineers, educators, and scientific software teams identify reproducibility gaps and prioritize practical improvements.
+The project is broader than any single software tool. Its primary outputs are a practical best-practices guide, hands-on tutorial materials, reusable reproducibility resources, and research prototypes that demonstrate and evaluate selected approaches to AI-assisted reproducibility.
 
----
+The central principle is that AI should **support rather than replace transparent reproducibility practices and human scientific judgment**. AI assistance is most useful when it is grounded in verifiable evidence, its recommendations are traceable, and researchers remain responsible for scientific validation.
 
-## Key Features
+## Research Motivation
 
-* Deterministic reproducibility artifact assessment
-* Quality-aware evaluation of repository artifacts
-* Recursive discovery of nested documentation and configuration files
-* HPC-aware and applicability-aware scoring
-* Local grounded AI prioritization using Ollama
-* Evidence-constrained AI outputs
-* Automated benchmarking across scientific software repositories
-* Statistical analysis and cross-domain comparisons
-* Publication-quality figures and tables
-* FastAPI web assessment service
-* Downloadable JSON and HTML assessment reports
+Modern scientific software may depend on source code, datasets, machine-learning models, software environments, compilers, accelerators, HPC schedulers, experiment configurations, and many other artifacts. Reproducing a result therefore requires more than making source code publicly available.
 
----
+AI introduces both opportunities and risks. It can help researchers identify missing reproducibility information, explain technical gaps, prioritize improvements, assist with documentation, and support workflow debugging. At the same time, AI can generate unsupported recommendations or obscure the evidence behind an assessment if it is used without appropriate constraints.
 
-## Project Goals
+This fellowship explores practical ways to combine established research software engineering practices with carefully grounded AI assistance.
 
-ReproPilot aims to:
+## Fellowship Goals
 
-* Promote reproducible and sustainable scientific software practices
-* Distinguish artifact presence from artifact quality
-* Provide transparent and interpretable repository scoring
-* Support secure local AI use in institutional and HPC environments
-* Reduce unsupported or hallucinated AI recommendations
-* Provide reusable educational tutorials, templates, and examples
-* Enable empirical research on scientific software reproducibility
-* Lower the barrier to reproducibility assessment through a web interface
+The project aims to:
 
----
+- develop practical best practices for reproducible and sustainable AI-enabled scientific software;
+- create hands-on tutorials that researchers and students can reuse;
+- examine where AI can responsibly assist reproducibility work;
+- emphasize version control, documentation, testing, environment capture, provenance, and portable execution;
+- address reproducibility considerations specific to HPC and AI workflows;
+- demonstrate human-in-the-loop and evidence-grounded approaches to AI assistance;
+- provide reusable templates and examples for the scientific software community; and
+- share lessons and outcomes with the BSSw and broader research software engineering communities.
 
-## Framework Architecture
+## Fellowship Deliverables
 
-ReproPilot evaluates repositories through a multi-stage workflow:
+### Best Practices Guide
 
-```text
-GitHub Repository
-        │
-        ▼
-Artifact Presence Assessment
-        │
-        ▼
-Artifact Quality Assessment
-        │
-        ▼
-Grounded Local AI Prioritization
-        │
-        ▼
-Agreement and Statistical Analysis
-        │
-        ▼
-JSON, HTML, CSV, and Visual Reports
-```
+The main guide is being developed in [`guide/`](guide/). The Milestone 2 comprehensive draft covers reproducible scientific workflows, software sustainability, testing and continuous integration, environment and dependency management, containers, HPC portability, experiment provenance, responsible AI assistance, practical recommendations, and case studies.
 
-Deterministic assessment remains authoritative. The grounded AI component is used only to prioritize verified findings and does not independently assign repository scores.
+### Tutorial Materials
 
----
+Hands-on notebooks and supporting materials are available in [`notebooks/`](notebooks/). These materials are being expanded into a tutorial series that demonstrates reproducibility practices through executable examples.
 
-## Assessment Categories
+### Reusable Templates
 
-### Artifact Presence
+The [`templates/`](templates/) directory contains example environment, container, HPC, and experiment-tracking artifacts that can be adapted for scientific software projects.
 
-The presence checker identifies whether a repository includes:
+## Examples and Research Prototypes
 
-* Project documentation
-* Dependency specifications
-* Reproducible environment definitions
-* Spack or HPC software-stack configuration
-* Automated tests
-* Container recipes
-* Experiment or provenance tracking
-* Software licensing
-* Scheduler and compiler metadata
-* Domain-specific artifacts where applicable
+The fellowship uses practical examples and prototypes to explore selected ideas from the guide. These implementations are supporting research artifacts rather than the overall identity of the fellowship project.
 
-### Artifact Quality
+### ReproPilot
 
-The quality assessor evaluates:
+**ReproPilot** is a research prototype developed within the fellowship to investigate one approach to AI-assisted reproducibility-readiness assessment. It combines deterministic repository evidence, quality-aware artifact analysis, and optional grounded local AI prioritization.
 
-* README completeness
-* Installation and execution instructions
-* Dependency pinning and runtime declarations
-* Container reproducibility
-* Test assertions and numerical validation
-* Continuous integration configuration
-* Provenance and experiment metadata
-* HPC portability information
-* Compiler, MPI, GPU, scheduler, and module documentation
+The deterministic assessment remains authoritative. The AI component is constrained to work from verified findings and is used as complementary decision support rather than as an independent reproducibility judge.
 
----
+ReproPilot has also served as an experimental platform for studying artifact presence versus artifact quality, cross-domain repository characteristics, and agreement between deterministic findings and grounded AI prioritization.
 
-## Grounded AI
+Detailed ReproPilot documentation is available in [`examples/repropilot/README.md`](examples/repropilot/README.md).
 
-ReproPilot supports optional local AI prioritization through Ollama.
-
-The AI layer receives only deterministic findings generated by ReproPilot. It is constrained to select exact assessment labels rather than inventing repository conditions.
-
-This design provides:
-
-* Local inference without cloud API keys
-* Compatibility with private or air-gapped environments
-* Reduced hallucination risk
-* Traceable recommendations
-* Structured JSON output
-* Comparison between deterministic and AI priorities
-
-The current reference implementation uses `gemma3:1b`, although other Ollama-compatible models may be evaluated.
-
----
-
-## Benchmark Evaluation
-
-ReproPilot was evaluated on 30 open-source scientific software repositories across five domains:
-
-| Domain                                       | Repositories |
-| -------------------------------------------- | -----------: |
-| High-Performance Computing                   |            6 |
-| Artificial Intelligence and Machine Learning |            6 |
-| Computational Biology                        |            6 |
-| Climate and Earth Science                    |            6 |
-| Medical AI                                   |            6 |
-
-The benchmark evaluates:
-
-* Artifact-presence scores
-* Artifact-quality scores
-* Category-level quality signals
-* Cross-domain differences
-* Presence-quality correlation
-* Grounded AI agreement
-* Assessment reliability
-
-### Selected Findings
-
-* Artifact presence and quality showed a moderate positive association.
-* Pearson correlation: `r = 0.407`, `p = 0.0255`
-* No statistically significant cross-domain differences were detected in the current sample.
-* The constrained AI experiment produced valid outputs for 28 of 30 repositories.
-* Valid AI-output rate: `93.3%`
-* Top-1 deterministic-AI agreement: `10.7%`
-* Mean Jaccard similarity: `0.313`
-* Mean F1 agreement score: `0.426`
-
-These findings support using grounded AI as complementary decision support rather than as a replacement for deterministic assessment.
-
----
-
-## Repository Structure
+## Repository Organization
 
 ```text
 ai-assisted-reproducibility-bssw/
-├── README.md
-├── LICENSE
-├── Dockerfile
-├── MLproject
-├── environment.yml
-├── requirements.txt
-├── spack.yaml
-│
-├── checker/
-│   ├── __init__.py
-│   ├── reproducibility_checker.py
-│   ├── quality_assessor.py
-│   ├── grounded_ai.py
-│   ├── ai_priority_ranker.py
-│   └── scoring_rules.yaml
-│
-├── notebooks/
-│   |── AI_Assisted_Reproducibility_Checker.ipynb
-|   └── AI_Assisted_Reproducibility_Checker_GUI.ipynb
-│
-├── examples/
-│   └── sample-ml-workflow/
-│       ├── ai_repo_assessor.py
-│       ├── README.md
-│       └── requirements.txt
-│
-├── guide/
-│   └── best-practices materials
-│
-├── templates/
-│   ├── Dockerfile
-│   ├── apptainer.def
-│   ├── environment.yml
-│   ├── requirements.txt
-│   ├── spack.yaml
-│   └── MLproject
-│
-├── tests/
-│   ├── test_checker.py
-│   ├── test_quality_assessor.py
-│   ├── test_quality_assessor_phase31.py
-│   └── test_grounded_ai.py
-│
-├── validation/
-│   ├── external repository validation
-│   ├── quality-assessment results
-│   └── grounded-AI validation
-│
-├── benchmark/
-│   ├── repositories.csv
-│   ├── run_large_scale_benchmark.py
-│   ├── summarize_benchmark.py
-│   └── results/
-│
-├── analysis/
-│   ├── statistical analysis
-│   ├── AI-agreement evaluation
-│   ├── figures/
-│   └── publication_tables/
-│
-└── webapp/
-├── frontend/
-│   ├── index.html
-│   ├── styles.css
-│   └── app.js
-└── backend/
+├── README.md                  # Fellowship project landing page
+├── guide/                     # Best Practices Guide
+├── notebooks/                 # Tutorial notebooks
+├── templates/                 # Reusable reproducibility templates
+├── examples/                  # Examples and research prototypes
+│   ├── repropilot/            # ReproPilot documentation
+│   └── sample-ml-workflow/    # Example scientific/ML workflow
+├── checker/                   # ReproPilot prototype implementation
+├── validation/                # Prototype validation artifacts
+├── benchmark/                 # Prototype benchmark evaluation
+├── analysis/                  # Statistical and agreement analysis
+├── tests/                     # Automated tests
+└── webapp/                    # Prototype web interface
 ```
 
----
+The ReproPilot source directories remain at the repository root for now to preserve working imports, tests, notebooks, benchmark scripts, and web-application paths. Reorganizing implementation code can be considered separately after the fellowship deliverables are stabilized.
 
-## Installation
+## Milestone Progress
 
-Clone the repository:
+### Milestone 1 — Guide Outline and Prototype Tutorial
 
-```bash
-git clone https://github.com/szuananwar/ai-assisted-reproducibility-bssw.git
-cd ai-assisted-reproducibility-bssw
-```
+Initial guide organization and prototype tutorial materials established the foundation for the fellowship work.
 
-Create a Python environment:
+### Milestone 2 — Complete Drafts and Feedback
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install --upgrade pip
-python3 -m pip install -r requirements.txt
-```
+Current work focuses on:
 
----
+- completing the comprehensive Best Practices Guide draft;
+- preparing the full tutorial series with code, documentation, and environment setup;
+- collecting technical and beta-testing feedback; and
+- planning preliminary community dissemination and workshop activities.
 
-## Run the Deterministic Checker
+### Milestone 3 — Final Publication and Dissemination
 
-```bash
-python3 - <<'PY'
-from checker.reproducibility_checker import assess_repository
+The final phase will revise and publish the guide and tutorials, support community dissemination, prepare the fellowship webinar, and communicate project outcomes through BSSw channels.
 
-result = assess_repository(".")
-print(result)
-PY
-```
+## Guiding Principles
 
----
+Across the fellowship materials, several principles are emphasized:
 
-## Run the Quality Assessment
+- **Evidence before automation:** AI recommendations should be connected to observable evidence.
+- **Human oversight:** researchers remain responsible for scientific and methodological decisions.
+- **Reproducibility readiness is not proof of reproduction:** repository artifacts can indicate preparedness but cannot guarantee scientific correctness or successful execution.
+- **Quality matters as well as presence:** having a README, test directory, environment file, or container recipe does not necessarily mean that the artifact is complete or useful.
+- **Applicability matters:** not every scientific software project requires the same artifacts, especially across HPC and non-HPC settings.
+- **Sustainability and reproducibility reinforce one another:** documentation, testing, version control, provenance, and maintainable environments improve both immediate reproducibility and long-term software health.
 
-```bash
-python3 - <<'PY'
-from checker.quality_assessor import assess_repository_quality
+## Community and Feedback
 
-result = assess_repository_quality(
-    ".",
-    hpc_applicable=True
-)
-
-print(result)
-PY
-```
-
----
-
-## Run the Tests
-
-```bash
-python3 -m pytest tests -v
-```
-
----
-
-## Run the Jupyter Notebook
-
-Start Jupyter:
-
-```bash
-jupyter lab
-```
-
-Open:
-
-```text
-notebooks/AI_Assisted_Reproducibility_Checker.ipynb
-```
-
-The notebook demonstrates how to:
-
-* Select a repository
-* Run deterministic checks
-* Review category-level findings
-* Interpret scores
-* Identify reproducibility improvements
-
----
-
-## Run Grounded AI Prioritization
-
-Install and start Ollama:
-
-```bash
-ollama pull gemma3:1b
-ollama serve
-```
-
-Then run the grounded AI assessment using the available scripts in `checker/` or `analysis/`.
-
-The deterministic assessment can be used independently when Ollama is unavailable.
-
----
-
-## Run the Benchmark
-
-Evaluate the repository benchmark:
-
-```bash
-python3 benchmark/run_large_scale_benchmark.py \
-  --repropilot-root . \
-  --manifest benchmark/repositories.csv \
-  --workdir benchmark/repos \
-  --output-dir benchmark/results
-```
-
-Generate descriptive statistics:
-
-```bash
-python3 benchmark/summarize_benchmark.py
-```
-
----
-
-## Generate Statistical Results
-
-```bash
-python3 analysis/run_statistical_analysis.py
-```
-
-Generated outputs include:
-
-* Bootstrap confidence intervals
-* Pearson and Spearman correlations
-* One-way ANOVA
-* Kruskal-Wallis tests
-* Effect sizes
-* Holm-adjusted pairwise comparisons
-
----
-
-## Generate Publication Figures
-
-```bash
-python3 analysis/generate_publication_figures.py
-```
-
-Figures are written to:
-
-```text
-analysis/figures/
-```
-
-Publication tables are written to:
-
-```text
-analysis/publication_tables/
-```
-
-Each figure is available as a 300-DPI PNG and vector PDF.
-
----
-
-## Run the Web Dashboard and API
-
-Create and activate a web environment:
-
-```bash
-python3 -m venv .venv-web
-source .venv-web/bin/activate
-python3 -m pip install -r webapp/backend/requirements.txt
-```
-
-Run the web tests:
-
-```bash
-PYTHONPATH=webapp/backend:. python3 -m pytest webapp/backend/tests -v
-```
-Start the FastAPI server:
-
-```bash
-PYTHONPATH=webapp/backend:. uvicorn app.main:app --reload
-```
-Open the interactive API documentation:
-
-```text
-http://127.0.0.1:8000/
-```
-The API documentation remains available at:
-
-```text
-http://127.0.0.1:8000/docs
-```
-
-Health check:
-```text
-http://127.0.0.1:8000/health
-```
-Example API request:
-```bash
-curl -X POST \
-  "http://127.0.0.1:8000/api/assess" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "repository_url": "https://github.com/szuananwar/ai-assisted-reproducibility-bssw",
-    "hpc_applicable": true,
-    "use_ai": false
-  }'
-```
-
-The response includes:
-
-* Assessment ID
-* Presence score and findings
-* Quality score and findings
-* Optional grounded AI priorities
-* HTML report path
-* JSON report path
-
----
-
-## Security Scope
-
-The Phase 6.1 web application:
-
-* Accepts only public HTTPS GitHub repository URLs
-* Uses shallow temporary clones
-* Deletes cloned repositories after assessment
-* Does not execute repository source code
-* Does not require GitHub credentials
-* Runs deterministic assessment locally
-
-Future versions will add stronger resource limits, asynchronous jobs, authentication, and persistent assessment history.
-
----
-
-## Interpretation of Scores
-
-ReproPilot measures repository reproducibility readiness. It does not guarantee:
-
-* Scientific correctness
-* Numerical validity
-* Successful workflow execution
-* Dataset availability
-* Hardware equivalence
-* Complete experimental reproduction
-
-Scores should be interpreted alongside expert review and, where possible, runtime validation.
-
----
-
-## Current Development Status
-
-* Phase 1: Deterministic checker — complete
-* Phase 2: External validation — complete
-* Phase 3: Quality-aware assessment — complete
-* Phase 3.1: False-negative reduction — complete
-* Phase 4: Grounded AI prioritization — complete
-* Phase 5.1: Large-scale benchmark — complete
-* Phase 5.2: Visualization — complete
-* Phase 5.3: Statistical analysis — complete
-* Phase 5.3A: AI agreement evaluation — complete
-* Phase 5.4: Publication figures — complete
-* Phase 5.5: Manuscript drafting — in progress
-* Phase 6.1: FastAPI web MVP — complete
-* Phase 6.2: Interactive web dashboard — complete
-
----
-
-## Planned Work
-
-Future development will include:
-
-* Interactive web dashboard
-* PDF report generation
-* GitHub Actions integration
-* Continuous reproducibility monitoring
-* Domain-specific assessment profiles
-* Runtime and container execution validation
-* Assessment history and trend visualization
-* Self-healing reproducibility recommendations
-* Additional local LLM evaluation
-* Expanded scientific software benchmark
-
----
-
-## Citation
-
-A formal software citation and DOI will be added after the repository is archived through Zenodo.
-
-Suggested citation:
-
-```text
-Anwar, S. ReproPilot: A Grounded AI Framework for Reproducibility
-Assessment of Scientific Software and HPC Workflows. 2026.
-```
-
----
+The Milestone 2 materials are intended for collaborator, mentor, researcher, and community feedback. Feedback will be used to improve technical accuracy, relevance, tutorial usability, and the final recommendations before Milestone 3 publication.
 
 ## Fellowship Acknowledgment
 
-This project was developed as part of the 2026 Better Scientific Software Fellowship:
+This work is being conducted as part of the **2026 Better Scientific Software Fellowship** project:
 
 **Sustainable AI: Best Practices for Reproducible Scientific Software Development**
 
----
-
 ## License
 
-This project is distributed under the terms provided in the repository’s `LICENSE` file.
-
----
+This project is distributed under the terms provided in the repository's [`LICENSE`](LICENSE) file.
 
 ## Author
 
-**Suzan Anwar**
-Department of Computer Science
-Philander Smith University
+**Suzan Anwar, Ph.D.**  
+Department of Computer Science  
+Philander Smith University  
 Little Rock, Arkansas, USA
