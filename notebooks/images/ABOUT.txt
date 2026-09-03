@@ -1,0 +1,1 @@
+Static images in this directory support GitHub rendering of interactive tutorial examples.
