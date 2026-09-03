@@ -2,108 +2,53 @@
 
 **2026 Better Scientific Software Fellowship — Milestone 2 Draft**
 
-This tutorial series accompanies the Best Practices Guide for the fellowship project **Sustainable AI: Best Practices for Reproducible Scientific Software Development**. The tutorials are designed to help researchers, research software engineers, faculty, students, and HPC/AI practitioners apply reproducibility practices through hands-on activities.
+This tutorial series accompanies the Best Practices Guide for **Sustainable AI: Best Practices for Reproducible Scientific Software Development**. It is designed for researchers, research software engineers, faculty, students, and HPC/AI practitioners.
 
-The series is broader than ReproPilot. ReproPilot is used in selected activities as a research prototype and teaching example for evidence-based repository assessment and grounded AI assistance.
+The series is broader than ReproPilot. Tutorials 1–6 teach transferable practices; Tutorial 7 uses ReproPilot as one research prototype and case study.
 
 ## Learning Path
 
-| Tutorial | Topic | Primary learning outcome | Status |
+| Tutorial | Topic | Notebook | Status |
 | --- | --- | --- | --- |
-| 1 | Reproducibility Foundations | Identify the artifacts and practices needed to make a scientific software project reproducibility-ready. | Draft available |
-| 2 | Environments and Dependencies | Create and evaluate dependency/environment specifications for scientific and AI workflows. | Milestone 2 draft activity guide |
-| 3 | Testing and Continuous Integration | Distinguish software tests from scientific validation and plan meaningful automated checks. | Milestone 2 draft activity guide |
-| 4 | Experiment Tracking and Provenance | Record parameters, data/model provenance, environment information, and source revisions for computational experiments. | Milestone 2 draft activity guide |
-| 5 | HPC Reproducibility and Portability | Document compilers, MPI/GPU stacks, schedulers, resources, modules, and site-specific assumptions. | Milestone 2 draft activity guide |
-| 6 | Responsible AI-Assisted Reproducibility | Use AI as a grounded assistant while preserving evidence, human oversight, and scientific responsibility. | Draft available in hands-on notebook |
-| 7 | Case Study: ReproPilot | Apply an evidence-based assessment, inspect repository evidence, and compare deterministic findings with optional grounded AI guidance. | Draft available |
+| 1 | Reproducibility Foundations | [`Tutorial_01_Reproducibility_Foundations.ipynb`](Tutorial_01_Reproducibility_Foundations.ipynb) | Executable Milestone 2 draft |
+| 2 | Environments and Dependencies | [`Tutorial_02_Environments_and_Dependencies.ipynb`](Tutorial_02_Environments_and_Dependencies.ipynb) | Executable Milestone 2 draft |
+| 3 | Testing, CI, and Scientific Validation | [`Tutorial_03_Testing_CI_and_Scientific_Validation.ipynb`](Tutorial_03_Testing_CI_and_Scientific_Validation.ipynb) | Executable Milestone 2 draft |
+| 4 | Experiment Tracking and Provenance | [`Tutorial_04_Experiment_Tracking_and_Provenance.ipynb`](Tutorial_04_Experiment_Tracking_and_Provenance.ipynb) | Executable Milestone 2 draft |
+| 5 | HPC Reproducibility and Portability | [`Tutorial_05_HPC_Reproducibility_and_Portability.ipynb`](Tutorial_05_HPC_Reproducibility_and_Portability.ipynb) | Executable Milestone 2 draft |
+| 6 | Responsible AI-Assisted Reproducibility | [`Tutorial_06_Responsible_AI_Assisted_Reproducibility.ipynb`](Tutorial_06_Responsible_AI_Assisted_Reproducibility.ipynb) | Executable Milestone 2 draft |
+| 7 | ReproPilot Case Study | [`AI_Assisted_Reproducibility_Checker_GUI.ipynb`](AI_Assisted_Reproducibility_Checker_GUI.ipynb) and [`AI_Assisted_Reproducibility_Checker.ipynb`](AI_Assisted_Reproducibility_Checker.ipynb) | Executable case-study draft |
 
-## Existing Hands-On Notebooks
+## What the Tutorials Teach
 
-### `AI_Assisted_Reproducibility_Checker.ipynb`
+**Tutorial 1 — Reproducibility Foundations** introduces repository evidence, applicability, artifact quality, and the distinction between reproducibility readiness and successful reproduction.
 
-This is the primary self-paced hands-on notebook. It currently demonstrates repository assessment, evidence inspection, optional local grounded-AI explanation, before-and-after reproducibility improvement, and reflection on the limitations of automated assessment.
+**Tutorial 2 — Environments and Dependencies** examines dependency declarations, version constraints, environment reconstruction, platform information, and HPC/runtime assumptions.
 
-For the fellowship, treat ReproPilot in this notebook as a **case study and instructional prototype**, not as the definition of AI-assisted reproducibility.
+**Tutorial 3 — Testing, CI, and Scientific Validation** distinguishes unit tests, workflow/integration tests, numerical tolerance checks, scientific validation, and production-scale HPC validation.
 
-### `AI_Assisted_Reproducibility_Checker_EXECUTED.ipynb`
+**Tutorial 4 — Experiment Tracking and Provenance** builds a structured provenance record connecting a result to source revision, data/model versions, preprocessing, parameters, seed, environment, hardware, and metrics.
 
-Executed companion copy of the checker tutorial. It can be used to inspect representative outputs without rerunning every cell. Because generated outputs can become stale as the prototype changes, the unexecuted notebook remains the primary tutorial source.
+**Tutorial 5 — HPC Reproducibility and Portability** records compiler/MPI/accelerator/module and resource context and separates scientifically relevant configuration from site-specific scheduler settings.
 
-### `AI_Assisted_Reproducibility_Checker_GUI.ipynb`
+**Tutorial 6 — Responsible AI-Assisted Reproducibility** demonstrates evidence grounding, unsupported-claim detection, constrained AI roles, and human-in-the-loop review without requiring an external AI service.
 
-Interactive GUI-oriented companion notebook for learners who benefit from a more guided interface.
+**Tutorial 7 — ReproPilot Case Study** applies the ideas through the ReproPilot research prototype. The GUI notebook includes a static Spack example for GitHub viewers; interactive controls require JupyterLab/Notebook with an active kernel.
 
-## Milestone 2 Activity Guides
+## Existing ReproPilot Companion Notebooks
 
-The following activities turn the existing materials into a coherent tutorial series while additional standalone notebooks are developed.
+- `AI_Assisted_Reproducibility_Checker.ipynb` — primary self-paced ReproPilot hands-on tutorial.
+- `AI_Assisted_Reproducibility_Checker_EXECUTED.ipynb` — executed companion for inspecting representative outputs.
+- `AI_Assisted_Reproducibility_Checker_GUI.ipynb` — interactive GUI-oriented Tutorial 7 companion.
 
-### Tutorial 1 — Reproducibility Foundations
-
-**Goal:** Understand reproducibility as a connected scientific software practice rather than a single file or tool.
-
-**Activity:** Select one scientific software repository and identify evidence for documentation, dependencies, environments, tests, licensing, data/model provenance, experiment configuration, and portable execution. For each artifact, record both what its presence supports and what it cannot prove.
-
-**Reflection:** Which reproducibility requirements are general software practices, and which depend on the scientific domain?
-
-### Tutorial 2 — Environments and Dependencies
-
-**Goal:** Understand how dependency declarations and environment capture support repeatable computational work.
-
-**Activity:** Examine `requirements.txt`, `environment.yml`, `pyproject.toml`, lock files, or `spack.yaml` from a scientific software project. Identify unpinned dependencies, missing runtime information, accelerator/compiler assumptions, and information that would be required to reconstruct the environment.
-
-**Deliverable:** Produce or improve one environment specification and document the assumptions it cannot encode.
-
-### Tutorial 3 — Testing and Continuous Integration
-
-**Goal:** Distinguish code correctness checks from scientific validation.
-
-**Activity:** Review an existing test suite or design tests for a small scientific workflow. Include at least one unit test, one workflow/integration test, and one scientifically meaningful assertion or tolerance-based comparison where appropriate.
-
-**Reflection:** What would a passing test suite still fail to prove about the scientific result?
-
-### Tutorial 4 — Experiment Tracking and Provenance
-
-**Goal:** Connect computational results to the artifacts and configurations that produced them.
-
-**Activity:** Create an experiment record containing source revision, dataset/model version, preprocessing, parameters or hyperparameters, random seed, software environment, hardware, and evaluation metrics. An experiment tracker such as MLflow may be used, but a structured provenance record is also acceptable.
-
-**Deliverable:** A reproducibility record sufficient for another researcher to identify the configuration associated with a reported result.
-
-### Tutorial 5 — HPC Reproducibility and Portability
-
-**Goal:** Separate scientifically essential configuration from site-specific HPC settings.
-
-**Activity:** Review or create an HPC execution record containing compiler, MPI implementation, GPU/accelerator information, CUDA/ROCm where applicable, environment modules, scheduler directives, node/process/thread counts, and architecture-specific assumptions.
-
-**Reflection:** Which settings must remain fixed to reproduce the scientific method, and which can be adapted on another HPC system?
-
-### Tutorial 6 — Responsible AI-Assisted Reproducibility
-
-**Goal:** Evaluate where AI assistance is useful and where human verification is required.
-
-**Activity:** Provide an AI assistant with a small set of verified reproducibility findings. Ask it to explain or prioritize the findings. Then classify each response as supported, unsupported, overly generic, or requiring expert review.
-
-**Key rule:** AI-generated text is not itself reproducibility evidence.
-
-### Tutorial 7 — ReproPilot Case Study
-
-**Goal:** Explore one implementation of grounded AI-assisted reproducibility assessment.
-
-Use `AI_Assisted_Reproducibility_Checker.ipynb` to:
-
-1. run deterministic repository checks;
-2. inspect the evidence package;
-3. interpret reproducibility-readiness findings;
-4. optionally generate local AI explanations;
-5. compare weak and stronger repository examples; and
-6. discuss why repository readiness is not proof of successful scientific reproduction.
+These notebooks are supporting case-study materials. They do not define the broader fellowship project.
 
 ## Recommended Order
 
-Learners new to research software reproducibility should work through Tutorials 1–7 in order. Experienced research software engineers may begin with the topic most relevant to their project and use Tutorial 7 as a case study after reviewing the responsible-AI principles.
+Learners new to research software reproducibility should complete Tutorials 1–7 in order. Experienced practitioners may select a topic-specific notebook and then use Tutorial 7 to examine one implementation of evidence-grounded AI assistance.
 
 ## Environment Setup
+
+Tutorials 1–6 intentionally rely primarily on the Python standard library so they remain lightweight and portable. Tutorial 7 uses the repository package and additional dependencies.
 
 From the repository root:
 
@@ -118,15 +63,34 @@ python -m pip install -e ".[dev]"
 jupyter lab
 ```
 
-Optional local AI demonstration:
+Optional local AI demonstration for ReproPilot:
 
 ```bash
 ollama pull gemma3:1b
 ollama serve
 ```
 
-The deterministic portions of the tutorials do not require Ollama.
+Tutorials 1–6 do not require Ollama.
 
 ## Relationship to the Best Practices Guide
 
-The tutorials correspond to the major topics in [`../guide/best-practices-guide.md`](../guide/best-practices-guide.md). Learners are encouraged to use the guide for conceptual background and the tutorial series for practical exercises.
+The notebooks correspond to major topics in [`../guide/best-practices-guide.md`](../guide/best-practices-guide.md). Use the guide for conceptual background and the notebooks for practical exercises.
+
+## Beta Testing and Feedback
+
+Milestone 2 materials should be beta-tested before final publication. Reviewers should record:
+
+- clarity of instructions and learning objectives;
+- setup difficulty and execution problems;
+- technical/scientific accuracy;
+- approximate completion time;
+- usefulness to scientific software practitioners;
+- relevance across AI, HPC, and other scientific domains;
+- accessibility for students and new contributors; and
+- any statement that overclaims what repository evidence or AI assistance can establish.
+
+Feedback should be documented and incorporated into Milestone 3 revisions.
+
+## Milestone 2 Status
+
+The tutorial series now contains executable draft notebooks for Tutorials 1–6 plus the ReproPilot Tutorial 7 case-study materials. The next phase is beta testing, technical review, refinement of exercises and outputs, and incorporation of documented feedback before final publication.
