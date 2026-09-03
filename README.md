@@ -38,11 +38,21 @@ The project aims to:
 
 ### Best Practices Guide
 
-The main guide is being developed in [`guide/`](guide/). The Milestone 2 comprehensive draft covers reproducible scientific workflows, software sustainability, testing and continuous integration, environment and dependency management, containers, HPC portability, experiment provenance, responsible AI assistance, practical recommendations, and case studies.
+The Milestone 2 comprehensive draft is available in [`guide/best-practices-guide.md`](guide/best-practices-guide.md). It covers reproducible scientific workflows, software sustainability, testing and continuous integration, environment and dependency management, containers, HPC portability, experiment provenance, responsible AI assistance, practical recommendations, and case studies.
 
-### Tutorial Materials
+### Tutorial Series
 
-Hands-on notebooks and supporting materials are available in [`notebooks/`](notebooks/). These materials are being expanded into a tutorial series that demonstrates reproducibility practices through executable examples.
+The organized Milestone 2 tutorial series is available in [`notebooks/README.md`](notebooks/README.md). It provides a seven-part learning path covering:
+
+1. reproducibility foundations;
+2. environments and dependencies;
+3. testing and continuous integration;
+4. experiment tracking and provenance;
+5. HPC reproducibility and portability;
+6. responsible AI-assisted reproducibility; and
+7. ReproPilot as a supporting case study.
+
+Existing executable notebooks remain in [`notebooks/`](notebooks/), including the primary hands-on checker tutorial and GUI-oriented companion. The tutorial index also provides activity guides for the broader fellowship topics and identifies the next step of converting those activities into additional standalone executable notebooks and beta-testing them before Milestone 3.
 
 ### Reusable Templates
 
@@ -68,7 +78,8 @@ Detailed ReproPilot documentation is available in [`examples/repropilot/README.m
 ai-assisted-reproducibility-bssw/
 ├── README.md                  # Fellowship project landing page
 ├── guide/                     # Best Practices Guide
-├── notebooks/                 # Tutorial notebooks
+├── notebooks/                 # Tutorial series and executable notebooks
+│   └── README.md              # Tutorial learning path and activity guides
 ├── templates/                 # Reusable reproducibility templates
 ├── examples/                  # Examples and research prototypes
 │   ├── repropilot/            # ReproPilot documentation
@@ -91,12 +102,13 @@ Initial guide organization and prototype tutorial materials established the foun
 
 ### Milestone 2 — Complete Drafts and Feedback
 
-Current work focuses on:
+Current work includes:
 
-- completing the comprehensive Best Practices Guide draft;
-- preparing the full tutorial series with code, documentation, and environment setup;
-- collecting technical and beta-testing feedback; and
-- planning preliminary community dissemination and workshop activities.
+- a comprehensive Best Practices Guide draft;
+- an organized seven-part tutorial learning path with existing executable notebooks and broader activity guides;
+- documented environment/setup instructions for tutorial users;
+- preparation for technical and beta-testing feedback; and
+- preliminary community dissemination and workshop planning.
 
 ### Milestone 3 — Final Publication and Dissemination
 
