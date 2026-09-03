@@ -280,7 +280,3 @@ AI can make reproducibility work more accessible by helping researchers inspect 
 The central recommendation of this guide is therefore not to automate reproducibility judgment with AI, but to use AI carefully as an assistant to transparent, evidence-based, human-validated scientific software practice.
 
 ---
-
-## Milestone 2 Draft Status
-
-This document is the comprehensive draft of the Best Practices Guide prepared for Milestone 2 of the 2026 Better Scientific Software Fellowship. It is intended for technical review, collaborator feedback, and community input before final revision and publication during Milestone 3.
