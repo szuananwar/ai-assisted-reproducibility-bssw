@@ -30,7 +30,7 @@ Aim for a small but varied group, for example:
 - one faculty member, mentor, or research software engineer; and
 - one learner with less experience in reproducibility tooling.
 
-A group of **3–5 testers** is sufficient for an initial Milestone 2 usability pass if their feedback is documented clearly.
+A group of **3–5 testers** is sufficient for an initial usability pass if their feedback is documented clearly.
 
 ## Beta Testing Instructions
 
@@ -80,7 +80,7 @@ For actionable feedback, create a GitHub issue or note the related pull request 
 | --- | --- | --- | --- | --- | --- |
 | TBD | TBD | TBD | TBD | No | TBD |
 
-## Acceptance Criteria for Milestone 2 Beta Testing
+## Acceptance Criteria for Beta Testing
 
 The initial beta-testing requirement can be considered evidenced when:
 
@@ -91,6 +91,6 @@ The initial beta-testing requirement can be considered evidenced when:
 - feedback is connected to revisions, GitHub issues, or an explicit decision not to change; and
 - no tutorial presents reproducibility-readiness indicators or AI-generated guidance as proof of scientific reproduction.
 
-## Milestone 3 Follow-Up
+## Follow-Up
 
-Milestone 3 should use this evidence to refine learning objectives, examples, execution instructions, expected completion times, and final publication quality. Additional beta testing can be added as the audience broadens.
+We should use this evidence to refine learning objectives, examples, execution instructions, expected completion times, and final publication quality. Additional beta testing can be added as the audience broadens.
