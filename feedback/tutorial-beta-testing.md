@@ -7,6 +7,10 @@
 
 This document provides a lightweight, repeatable process for beta testing the fellowship tutorial series and recording evidence needed for Milestone 2 review and Milestone 3 refinement.
 
+For Milestone 2, each testing activity follows the same evidence lifecycle used for the broader fellowship review:
+
+**Prepared → Shared → Feedback Received → Revision Incorporated**
+
 The tutorial series includes six transferable-practice notebooks plus Tutorial 7, which uses ReproPilot as a case study. Beta testing should evaluate the learning experience, not just whether notebook cells execute.
 
 ## Tutorials in Scope
@@ -31,6 +35,21 @@ Aim for a small but varied group, for example:
 - one learner with less experience in reproducibility tooling.
 
 A group of **3–5 testers** is sufficient for an initial Milestone 2 usability pass if their feedback is documented clearly.
+
+## Beta-Testing Lifecycle
+
+| Tester / Role | Tutorial(s) | Prepared | Shared | Feedback Received | Revision Incorporated | Evidence / Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| Tester 1 — TBD | TBD | Yes — tutorial drafts and instructions prepared | Pending | Pending | Pending | Add date and evidence after invitation |
+| Tester 2 — TBD | TBD | Yes — tutorial drafts and instructions prepared | Pending | Pending | Pending | Add date and evidence after invitation |
+| Tester 3 — TBD | TBD | Yes — tutorial drafts and instructions prepared | Pending | Pending | Pending | Add date and evidence after invitation |
+
+### Status definitions
+
+- **Prepared:** executable draft, setup instructions, and feedback questions are ready.
+- **Shared:** an identified tester has received the repository/tutorial link and a request to test it.
+- **Feedback Received:** the tester's execution results and usability/technical observations are documented.
+- **Revision Incorporated:** actionable feedback has been addressed or a documented decision not to change has been made.
 
 ## Beta Testing Instructions
 
@@ -68,9 +87,9 @@ Do not fill this table until testing actually occurs.
 
 | Date | Tester / Role | Tutorial(s) | Setup Successful? | Approx. Time | Key Feedback | Action Taken | Status / Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| TBD | TBD | TBD | TBD | TBD | TBD | TBD | Pending |
-| TBD | TBD | TBD | TBD | TBD | TBD | TBD | Pending |
-| TBD | TBD | TBD | TBD | TBD | TBD | TBD | Pending |
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD | Prepared |
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD | Prepared |
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD | Prepared |
 
 ## Issue and Revision Tracking
 
@@ -84,6 +103,7 @@ For actionable feedback, create a GitHub issue or note the related pull request 
 
 The initial beta-testing requirement can be considered evidenced when:
 
+- the tutorial materials have progressed through **Prepared → Shared → Feedback Received → Revision Incorporated** for the initial testing cycle;
 - at least 3 testers or reviewers have completed one or more tutorials;
 - feedback includes both usability and technical/scientific observations;
 - at least one concrete improvement is identified and addressed when warranted;
