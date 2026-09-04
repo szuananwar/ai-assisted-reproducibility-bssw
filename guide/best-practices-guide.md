@@ -167,6 +167,20 @@ Teams should establish shared conventions for repository structure, version cont
 
 Students should be introduced early to version control, environment management, testing, documentation, and experiment tracking. These practices improve scientific reliability while building transferable research software engineering skills.
 
+### 11.1 Companion Tutorial Series
+
+This guide is accompanied by a hands-on Jupyter notebook series that translates the recommended practices into executable learning activities. The tutorials are designed to move from transferable reproducibility principles to a research-prototype case study:
+
+1. [`Tutorial_01_Reproducibility_Foundations.ipynb`](../notebooks/Tutorial_01_Reproducibility_Foundations.ipynb) — reproducibility foundations and evidence-based readiness;
+2. [`Tutorial_02_Environments_and_Dependencies.ipynb`](../notebooks/Tutorial_02_Environments_and_Dependencies.ipynb) — environments, dependencies, and reconstruction;
+3. [`Tutorial_03_Testing_CI_and_Scientific_Validation.ipynb`](../notebooks/Tutorial_03_Testing_CI_and_Scientific_Validation.ipynb) — testing, continuous integration, and scientific validation;
+4. [`Tutorial_04_Experiment_Tracking_and_Provenance.ipynb`](../notebooks/Tutorial_04_Experiment_Tracking_and_Provenance.ipynb) — experiment tracking and provenance;
+5. [`Tutorial_05_HPC_Reproducibility_and_Portability.ipynb`](../notebooks/Tutorial_05_HPC_Reproducibility_and_Portability.ipynb) — HPC reproducibility and portability;
+6. [`Tutorial_06_Responsible_AI_Assisted_Reproducibility.ipynb`](../notebooks/Tutorial_06_Responsible_AI_Assisted_Reproducibility.ipynb) — responsible AI-assisted reproducibility; and
+7. [`AI_Assisted_Reproducibility_Checker.ipynb`](../notebooks/AI_Assisted_Reproducibility_Checker.ipynb) and [`AI_Assisted_Reproducibility_Checker_GUI.ipynb`](../notebooks/AI_Assisted_Reproducibility_Checker_GUI.ipynb) — ReproPilot as a case study of grounded AI-assisted reproducibility assessment.
+
+The first six tutorials emphasize practices that can be applied independently of ReproPilot. Tutorial 7 demonstrates how selected principles can be combined in one research prototype. See the [`notebooks/README.md`](../notebooks/README.md) for the complete learning path and setup instructions.
+
 ## 12. Case Study: ReproPilot as an AI-Assisted Reproducibility Prototype
 
 ReproPilot is one research prototype developed within this fellowship to explore how deterministic repository evidence and grounded AI assistance can be combined. It is a case study supporting the broader fellowship research rather than the fellowship project itself.
@@ -220,6 +234,8 @@ Selected findings from the current benchmark include:
 - top-1 deterministic-AI agreement of **10.7%**;
 - mean Jaccard similarity of **0.313**; and
 - mean F1 agreement of **0.426**.
+
+**Practical interpretation.** These results suggest that deterministic assessment and grounded AI assistance sometimes identify overlapping concerns but frequently prioritize different reproducibility gaps. This supports using AI as complementary decision support rather than as a replacement for transparent, evidence-based assessment.
 
 The moderate presence-quality relationship reinforces the need to examine artifact content rather than merely count files. The relatively low deterministic-AI priority agreement reinforces the broader fellowship recommendation that AI should be treated as complementary decision support rather than a replacement for transparent evidence-based assessment.
 
@@ -278,5 +294,7 @@ Reproducible scientific software requires more than source-code availability. Su
 AI can make reproducibility work more accessible by helping researchers inspect evidence, understand gaps, prioritize improvements, and troubleshoot complex workflows. Its value is greatest when it is grounded in verifiable information and embedded within established research software engineering practices.
 
 The central recommendation of this guide is therefore not to automate reproducibility judgment with AI, but to use AI carefully as an assistant to transparent, evidence-based, human-validated scientific software practice.
+
+**Feedback on this Milestone 2 draft is welcome.** Readers are invited to review the guide and companion tutorials and report technical corrections, missing practices, usability concerns, or suggestions through the project repository. Feedback collected during the Milestone 2 review and beta-testing period will inform revisions leading to the final fellowship release.
 
 ---
