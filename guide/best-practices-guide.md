@@ -2,7 +2,7 @@
 
 ## Best Practices for Sustainable AI and HPC Workflows
 
-**2026 Better Scientific Software Fellowship — Milestone 2 Draft**
+**2026 Better Scientific Software Fellowship-Milestone 2 Draft**
 
 **Author:** Suzan Anwar, Ph.D.  
 **Fellowship Project:** *Sustainable AI: Best Practices for Reproducible Scientific Software Development*
