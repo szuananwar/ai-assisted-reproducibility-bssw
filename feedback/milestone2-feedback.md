@@ -1,4 +1,4 @@
-# Milestone 2 Feedback and Revision Log
+# Feedback and Revision Log
 
 **2026 Better Scientific Software Fellowship**  
 **Project:** *Sustainable AI: Best Practices for Reproducible Scientific Software Development*  
@@ -6,13 +6,13 @@
 
 ## Purpose
 
-This document records technical, mentor, collaborator, and community feedback on the Milestone 2 fellowship deliverables and tracks how that feedback is incorporated into the Best Practices Guide and tutorial materials.
+This document records technical, mentor, collaborator, and community feedback on the BSSw fellowship deliverables and tracks how that feedback is incorporated into the Best Practices Guide and tutorial materials.
 
 The goal is to preserve evidence of review and revision without overstating feedback that has not yet been received.
 
 ## Deliverables Under Review
 
-- [`../guide/best-practices-guide.md`](../guide/best-practices-guide.md) — comprehensive Milestone 2 Best Practices Guide draft.
+- [`../guide/best-practices-guide.md`](../guide/best-practices-guide.md) — comprehensive Best Practices Guide draft.
 - [`../notebooks/README.md`](../notebooks/README.md) — tutorial-series overview and learning path.
 - Tutorials 1–6 in [`../notebooks/`](../notebooks/).
 - Tutorial 7 ReproPilot case-study notebooks in [`../notebooks/`](../notebooks/).
@@ -59,8 +59,8 @@ Feedback will be evaluated against the fellowship's core principles:
 4. **Applicability matters.** Not every scientific software project requires the same artifacts or infrastructure.
 5. **Quality matters as well as presence.** The usefulness and completeness of an artifact can be more important than whether a file merely exists.
 
-## Milestone 2 Completion Criterion
+## Completion Criterion
 
-For Milestone 2, this log should contain at least one documented technical/mentor review of the guide and evidence that actionable feedback was considered or incorporated. Tutorial-specific usability evidence is tracked separately in [`tutorial-beta-testing.md`](tutorial-beta-testing.md).
+For this log should contain at least one documented technical/mentor review of the guide and evidence that actionable feedback was considered or incorporated. Tutorial-specific usability evidence is tracked separately in [`tutorial-beta-testing.md`](tutorial-beta-testing.md).
 
-This document is a living record and will continue to be updated during Milestone 3 revisions.
+This document is a living record and will continue to be updated.
