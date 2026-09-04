@@ -52,11 +52,15 @@ The organized Milestone 2 tutorial series is available in [`notebooks/README.md`
 6. responsible AI-assisted reproducibility; and
 7. ReproPilot as a supporting case study.
 
-Existing executable notebooks remain in [`notebooks/`](notebooks/), including the primary hands-on checker tutorial and GUI-oriented companion. The tutorial index also provides activity guides for the broader fellowship topics and identifies the next step of converting those activities into additional standalone executable notebooks and beta-testing them before Milestone 3.
+Executable draft notebooks for Tutorials 1–6 and the Tutorial 7 ReproPilot case-study materials are available in [`notebooks/`](notebooks/). The current Milestone 2 refinement phase focuses on beta testing, technical review, feedback integration, and preparation for final publication.
 
 ### Reusable Templates
 
 The [`templates/`](templates/) directory contains example environment, container, HPC, and experiment-tracking artifacts that can be adapted for scientific software projects.
+
+### Feedback and Workshop Planning
+
+Milestone 2 review and beta-testing evidence is organized under [`feedback/`](feedback/), including the [`Milestone 2 feedback log`](feedback/milestone2-feedback.md) and [`tutorial beta-testing plan`](feedback/tutorial-beta-testing.md). Preliminary community workshop planning is documented in [`workshop-planning.md`](workshop-planning.md).
 
 ## Examples and Research Prototypes
 
@@ -79,7 +83,9 @@ ai-assisted-reproducibility-bssw/
 ├── README.md                  # Fellowship project landing page
 ├── guide/                     # Best Practices Guide
 ├── notebooks/                 # Tutorial series and executable notebooks
-│   └── README.md              # Tutorial learning path and activity guides
+│   └── README.md              # Tutorial learning path
+├── feedback/                  # Milestone 2 review and beta-testing records
+├── workshop-planning.md       # Preliminary community workshop plan
 ├── templates/                 # Reusable reproducibility templates
 ├── examples/                  # Examples and research prototypes
 │   ├── repropilot/            # ReproPilot documentation
@@ -105,10 +111,12 @@ Initial guide organization and prototype tutorial materials established the foun
 Current work includes:
 
 - a comprehensive Best Practices Guide draft;
-- an organized seven-part tutorial learning path with existing executable notebooks and broader activity guides;
+- a seven-part tutorial series with executable draft notebooks for Tutorials 1–6 and ReproPilot case-study materials for Tutorial 7;
 - documented environment/setup instructions for tutorial users;
-- preparation for technical and beta-testing feedback; and
-- preliminary community dissemination and workshop planning.
+- dedicated logs and procedures for technical feedback and tutorial beta testing; and
+- a preliminary community workshop plan with a tentative audience, format, learning outcomes, agenda, and candidate collaborators.
+
+The remaining Milestone 2 work is to **collect actual reviewer and beta-tester feedback and record the resulting revisions** in the repository logs.
 
 ### Milestone 3 — Final Publication and Dissemination
 
@@ -127,7 +135,7 @@ Across the fellowship materials, several principles are emphasized:
 
 ## Community and Feedback
 
-The Milestone 2 materials are intended for collaborator, mentor, researcher, and community feedback. Feedback will be used to improve technical accuracy, relevance, tutorial usability, and the final recommendations before Milestone 3 publication.
+The Milestone 2 materials are intended for collaborator, mentor, researcher, and community feedback. Review activity and revisions are tracked in [`feedback/milestone2-feedback.md`](feedback/milestone2-feedback.md), while tutorial usability testing is tracked in [`feedback/tutorial-beta-testing.md`](feedback/tutorial-beta-testing.md). Feedback will be used to improve technical accuracy, relevance, tutorial usability, and final recommendations before Milestone 3 publication.
 
 ## Fellowship Acknowledgment
 
