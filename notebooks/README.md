@@ -88,9 +88,3 @@ Milestone 2 materials should be beta-tested before final publication. Reviewers 
 - relevance across AI, HPC, and other scientific domains;
 - accessibility for students and new contributors; and
 - any statement that overclaims what repository evidence or AI assistance can establish.
-
-Feedback should be documented and incorporated into Milestone 3 revisions.
-
-## Milestone 2 Status
-
-The tutorial series now contains executable draft notebooks for Tutorials 1–6 plus the ReproPilot Tutorial 7 case-study materials. The next phase is beta testing, technical review, refinement of exercises and outputs, and incorporation of documented feedback before final publication.
