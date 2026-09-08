@@ -57,7 +57,9 @@ The quality assessor examines factors such as README completeness, installation 
 
 ReproPilot supports optional local AI prioritization through Ollama. The AI layer receives deterministic findings and is constrained to select from verified assessment labels rather than inventing repository conditions.
 
-The current reference implementation uses `gemma3:1b`. The deterministic assessment can be used independently when a local model is unavailable.
+The fellowship prototype and reported benchmark use `gemma3:1b` as the **reference model**. This model choice is not intended to define a universal requirement for the broader AI-assisted reproducibility approach. Ollama supports multiple local models, and the ReproPilot AI layer is designed around an Ollama model endpoint rather than around a scientific claim that only `gemma3:1b` is suitable. However, outputs can vary across model families, sizes, versions, quantizations, and prompts. Alternative models should therefore be treated as additional configurations and validated before their results are compared with or substituted for the reported `gemma3:1b` benchmark results.
+
+The deterministic assessment can be used independently when Ollama or a local model is unavailable.
 
 ## Benchmark Evaluation
 
@@ -151,12 +153,28 @@ notebooks/AI_Assisted_Reproducibility_Checker.ipynb
 
 ## Run Grounded AI Prioritization
 
-Install and start Ollama:
+Grounded AI is optional. It requires a local Ollama installation in addition to the Python environment above. Follow the current official Ollama installation instructions for your operating system. For Linux, Ollama currently documents:
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+Official installation page: https://ollama.com/download
+
+Verify that Ollama is available:
+
+```bash
+ollama --version
+```
+
+Then pull the **reference model used for the fellowship prototype and benchmark** and start the local service:
 
 ```bash
 ollama pull gemma3:1b
 ollama serve
 ```
+
+`gemma3:1b` is the documented reference configuration, not a claim that it is the only model that can be used. Other models exposed through Ollama may be explored, but model substitution can change generated priorities and explanations. Record the exact model name/tag and treat results from another model as a distinct experimental configuration unless that model has been separately validated against the same constrained-output expectations.
 
 Then use the grounded-AI scripts in `checker/` or `analysis/`.
 
