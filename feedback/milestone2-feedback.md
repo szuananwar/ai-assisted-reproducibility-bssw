@@ -29,7 +29,7 @@ Reviewers are asked to focus on technical and scientific accuracy, relevance to 
 
 | Reviewer / Source | Deliverable | Prepared | Shared | Feedback Received | Revision Incorporated | Evidence / Notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| Professional mentor | Best Practices Guide | Yes — comprehensive draft prepared | Pending | Pending | Pending | Add date/link or meeting/email note when shared |
+| Sameer Shende — professional mentor | Best Practices Guide and supporting ReproPilot/tutorial documentation | Yes — comprehensive draft prepared | Yes — materials shared for mentor review | Yes — 2026-09-08 | Yes — PR #34 merged | Mentor identified an undocumented Ollama prerequisite and asked whether `gemma3:1b` was required or whether other/newer models could be used. PR #34 documents Ollama setup and clarifies the reference-model/alternative-model policy. Follow-up review requested after revision. |
 | Collaborator / research software practitioner | Guide and/or tutorial series | Yes — review materials prepared | Pending | Pending | Pending | Record technical/relevance review |
 | Beta tester group | Tutorials 1–7 | Yes — executable drafts and testing protocol prepared | Pending | Pending | Pending | See [`tutorial-beta-testing.md`](tutorial-beta-testing.md) |
 
@@ -44,7 +44,7 @@ Reviewers are asked to focus on technical and scientific accuracy, relevance to 
 
 | Date | Reviewer / Source | Deliverable or Section | Feedback | Planned or Completed Action | Status / Evidence |
 | --- | --- | --- | --- | --- | --- |
-| TBD | Professional mentor | Best Practices Guide | Pending review | Share comprehensive draft and request technical/relevance feedback | Prepared |
+| 2026-09-08 | Sameer Shende — professional mentor | ReproPilot grounded-AI setup and tutorial documentation | The materials used `gemma3:1b` through Ollama but assumed Ollama was already installed. Sameer recommended documenting the Ollama installation prerequisite and asked whether a newer or different model could also be used. | Added explicit optional Ollama installation and verification guidance; clarified that `gemma3:1b` is the reference model for the current prototype/benchmark rather than a universal requirement; documented that alternative Ollama-hosted models may be explored but should be recorded and separately validated because outputs may differ. | Feedback incorporated in merged PR #34: [`Incorporate mentor feedback on Ollama setup and model choice`](https://github.com/szuananwar/ai-assisted-reproducibility-bssw/pull/34). Follow-up mentor review requested. |
 | TBD | Collaborator / research software practitioner | Tutorial series | Pending review | Request feedback on learning sequence, examples, and technical accuracy | Prepared |
 | TBD | Beta tester(s) | Tutorials 1–7 | See [`tutorial-beta-testing.md`](tutorial-beta-testing.md) | Incorporate usability and execution feedback | Prepared |
 
@@ -52,7 +52,7 @@ Reviewers are asked to focus on technical and scientific accuracy, relevance to 
 
 | Revision Date | Source of Feedback | Change Made | Files / Sections Updated | Verification |
 | --- | --- | --- | --- | --- |
-| TBD | TBD | TBD | TBD | TBD |
+| 2026-09-08 | Sameer Shende — professional mentor | Documented Ollama installation/verification and clarified `gemma3:1b` as the current reference model while defining cautious use of alternative Ollama-hosted models. | `examples/repropilot/README.md`; `notebooks/README.md` | Merged PR #34; follow-up mentor review requested. |
 
 ## Milestone 2 Completion Criterion
 
