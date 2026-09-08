@@ -63,14 +63,29 @@ python -m pip install -e ".[dev]"
 jupyter lab
 ```
 
-Optional local AI demonstration for ReproPilot:
+### Optional local AI setup for Tutorial 7
+
+Tutorials 1–6 do **not** require Ollama. The grounded local-AI portion of Tutorial 7 is optional and requires Ollama to be installed separately.
+
+Follow the current official Ollama installation instructions for your operating system. On Linux, Ollama currently documents:
 
 ```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+Official installation page: https://ollama.com/download
+
+Verify the installation, then pull the reference model used in the fellowship prototype:
+
+```bash
+ollama --version
 ollama pull gemma3:1b
 ollama serve
 ```
 
-Tutorials 1–6 do not require Ollama.
+`gemma3:1b` is the **reference model used for the current ReproPilot prototype and benchmark**, not a requirement of the broader fellowship methodology. Other Ollama-hosted models may be explored, but generated priorities and explanations can differ by model. Record the exact model name/tag and treat a substituted model as a distinct experimental configuration unless it has been separately validated.
+
+For additional ReproPilot setup and interpretation guidance, see [`../examples/repropilot/README.md`](../examples/repropilot/README.md).
 
 ## Relationship to the Best Practices Guide
 
