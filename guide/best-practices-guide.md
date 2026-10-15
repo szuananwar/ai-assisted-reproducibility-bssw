@@ -309,4 +309,6 @@ The central recommendation of this guide is therefore not to automate reproducib
 
 ### Milestone 2 Review Status (October 2026)
 
-This document is the complete draft of the Best Practices Guide prepared for the 2026 Better Scientific Software Fellowship Milestone 2 review. It is accompanied by the draft tutorial series and supporting repository documentation. The guide will be shared with fellowship coordinators and collaborators for technical review and feedback. Revisions informed by documented feedback and tutorial beta testing will be incorporated into the final fellowship release.---
+This document is the complete draft of the Best Practices Guide prepared for the 2026 Better Scientific Software Fellowship Milestone 2 review. It is accompanied by the draft tutorial series and supporting repository documentation. The guide will be shared with fellowship coordinators and collaborators for technical review and feedback. Revisions informed by documented feedback and tutorial beta testing will be incorporated into the final fellowship release.
+
+---
