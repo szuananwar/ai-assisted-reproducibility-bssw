@@ -56,6 +56,7 @@ Record versions when differences may affect behavior. Overly loose dependencies 
 A package list alone may not capture the complete execution environment. Scientific workflows can depend on Python or compiler versions, CUDA or ROCm versions, MPI implementations, system libraries, environment modules, and hardware capabilities.
 
 Use Conda environments, lock files, Spack environments, containers, or other appropriate mechanisms to capture important environment information. Document assumptions that cannot be encoded directly.
+**Practical example:** A scientific Python workflow may provide a `requirements.txt` file listing package dependencies, but this alone may not preserve the Python interpreter version, CUDA runtime, system libraries, or accelerator assumptions. A stronger reproducibility package records the relevant software versions, includes an environment specification, and provides a tested command for running a representative workflow.
 
 ### 4.2 Spack and HPC software stacks
 
@@ -237,7 +238,7 @@ Selected findings from the current benchmark include:
 
 **Practical interpretation.** These results suggest that deterministic assessment and grounded AI assistance sometimes identify overlapping concerns but frequently prioritize different reproducibility gaps. This supports using AI as complementary decision support rather than as a replacement for transparent, evidence-based assessment.
 
-The moderate presence-quality relationship reinforces the need to examine artifact content rather than merely count files. The relatively low deterministic-AI priority agreement reinforces the broader fellowship recommendation that AI should be treated as complementary decision support rather than a replacement for transparent evidence-based assessment.
+The moderate presence-quality relationship reinforces the need to examine artifact content rather than merely count files. The relatively low agreement between deterministic and AI-selected priorities demonstrates that the two approaches can produce different recommendations. These findings motivate careful evaluation, transparent evidence grounding, and human oversight rather than treating AI-generated priorities as authoritative.
 
 These results are exploratory. Thirty repositories—six per domain—are not sufficient to establish universal differences among scientific software communities. The benchmark is useful as a case study and source of empirical observations, while broader validation remains future work.
 
@@ -297,13 +298,14 @@ The central recommendation of this guide is therefore not to automate reproducib
 
 **Feedback on this Milestone 2 draft is welcome.** Readers are invited to review the guide and companion tutorials and report technical corrections, missing practices, usability concerns, or suggestions through the project repository. Feedback collected during the Milestone 2 review and beta-testing period will inform revisions leading to the final fellowship release.
 
-## 18. References and Recommended Resources, with links to resources such as:
+## 18. References and Recommended Resources
+
 - [The Turing Way](https://the-turing-way.netlify.app/) — A community-developed handbook for reproducible, ethical, and collaborative research.
 - [Software Sustainability Institute](https://www.software.ac.uk/) — Resources and guidance for developing, maintaining, and sustaining research software.
-- [Spack Documentation ](https://spack.readthedocs.io/) — A community-developed handbook for reproducible, ethical, and collaborative research.
-- [Software Sustainability Institute](https://www.software.ac.uk/) — Resources and guidance for developing, maintaining, and sustaining research software.) — HPC software environments
-- [BuildTest Documentation](https://mlflow.org/docs/latest/) — HPC system and software testing
-- [MLflow Documentation](https://mlflow.org/docs/latest/) — experiment tracking
-- [OpenSSF](https://openssf.org/) — software quality and security practices
+- [Spack Documentation](https://spack.readthedocs.io/) — Package and environment management for scientific and HPC software stacks.
+- [BuildTest Documentation](https://buildtest.readthedocs.io/) — Tools and documentation for testing HPC systems and software environments.
+- [MLflow Documentation](https://mlflow.org/docs/latest/) — Experiment tracking and machine-learning lifecycle management.
+- [OpenSSF](https://openssf.org/) — Resources and best practices for open-source software security.
 
+**Milestone 2 Review Status (October 2026).** This document is the complete draft of the Best Practices Guide prepared for the 2026 Better Scientific Software Fellowship Milestone 2 review. It is accompanied by the draft tutorial series and supporting repository documentation. The guide is being shared with fellowship coordinators and collaborators for technical review and feedback. Revisions informed by documented feedback and tutorial beta testing will be incorporated into the final fellowship release.
 ---
