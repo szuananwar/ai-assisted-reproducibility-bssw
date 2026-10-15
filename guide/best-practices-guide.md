@@ -297,4 +297,13 @@ The central recommendation of this guide is therefore not to automate reproducib
 
 **Feedback on this Milestone 2 draft is welcome.** Readers are invited to review the guide and companion tutorials and report technical corrections, missing practices, usability concerns, or suggestions through the project repository. Feedback collected during the Milestone 2 review and beta-testing period will inform revisions leading to the final fellowship release.
 
+## 18. References and Recommended Resources, with links to resources such as:
+- [The Turing Way](https://the-turing-way.netlify.app/) — A community-developed handbook for reproducible, ethical, and collaborative research.
+- [Software Sustainability Institute](https://www.software.ac.uk/) — Resources and guidance for developing, maintaining, and sustaining research software.
+- [Spack Documentation ](- [The Turing Way](https://the-turing-way.netlify.app/) — A community-developed handbook for reproducible, ethical, and collaborative research.
+- [Software Sustainability Institute](https://www.software.ac.uk/) — Resources and guidance for developing, maintaining, and sustaining research software.) — HPC software environments
+- [BuildTest Documentation](https://mlflow.org/docs/latest/) — HPC system and software testing
+- [MLflow Documentation](https://mlflow.org/docs/latest/) — experiment tracking
+- [OpenSSF](https://openssf.org/) — software quality and security practices
+
 ---
