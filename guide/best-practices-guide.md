@@ -300,7 +300,7 @@ The central recommendation of this guide is therefore not to automate reproducib
 ## 18. References and Recommended Resources, with links to resources such as:
 - [The Turing Way](https://the-turing-way.netlify.app/) — A community-developed handbook for reproducible, ethical, and collaborative research.
 - [Software Sustainability Institute](https://www.software.ac.uk/) — Resources and guidance for developing, maintaining, and sustaining research software.
-- [Spack Documentation ](- [The Turing Way](https://the-turing-way.netlify.app/) — A community-developed handbook for reproducible, ethical, and collaborative research.
+- [Spack Documentation ](https://spack.readthedocs.io/) — A community-developed handbook for reproducible, ethical, and collaborative research.
 - [Software Sustainability Institute](https://www.software.ac.uk/) — Resources and guidance for developing, maintaining, and sustaining research software.) — HPC software environments
 - [BuildTest Documentation](https://mlflow.org/docs/latest/) — HPC system and software testing
 - [MLflow Documentation](https://mlflow.org/docs/latest/) — experiment tracking
